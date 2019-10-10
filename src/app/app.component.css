@@ -6,71 +6,67 @@ Logo Color:   #845007
 **/
 
 @font-face {
-  font-family: 'DPDorkDiary';
-  src: url('../assets/DPDorkDiary.ttf')  format('truetype');
-  font-weight: normal;
+    font-family: 'DPDorkDiary';
+    src: url('../assets/DPDorkDiary.ttf') format('truetype');
+    font-weight: normal;
 }
 
 body {
-  /**font-family: DPDorkDiary;**/
-  height: 100%;
-  display: grid;
-  grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
-  grid-template-rows: 12em auto;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar main";
+    /**font-family: DPDorkDiary;**/
+    height: 100%;
+    display: grid;
+    grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
+    grid-template-rows: 12em auto;
+    grid-template-areas: "sidebar header" "sidebar main";
 }
 
 @media screen and (max-width: 520px) {
-  body{
-  grid-template-columns: 0em auto;
-  }
+    body {
+        grid-template-columns: 0em auto;
+    }
 }
-
 
 /******************* HEADER *******************/
 
 header {
-  grid-area: header;
-  background-color: #ffffff;
-  z-index: 1;
+    grid-area: header;
+    background-color: #ffffff;
+    z-index: 1;
 }
 
 /******************* SIDEBAR *******************/
 
 nav {
-  z-index: -1;
-  background-color: #c9af98;
-  position: relative;
-  grid-area: sidebar;
+    z-index: -1;
+    background-color: #c9af98;
+    position: relative;
+    grid-area: sidebar;
 }
 
-.triangle{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 12em 12em;
-  border-color: transparent transparent #3a4660 transparent;
+.triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 12em 12em;
+    border-color: transparent transparent #3a4660 transparent;
 }
 
 /******************* MAIN *******************/
 
 main {
-  grid-area: main;
-  background-color: #c9af98;
-  color: #3a4660;
-  box-shadow: 0em 10em 15em 0em #000000;
+    grid-area: main;
+    background-color: #c9af98;
+    color: #3a4660;
+    box-shadow: 0em 10em 15em 0em #000000;
 }
 
 /******************* List *******************/
 
-.list{
-  height: 22em;
-
-  margin-top: 30em;
-  background-color: #ffffff;
+.list {
+    height: 22em;
+    margin-top: 30em;
+    background-color: #ffffff;
 }

@@ -15,14 +15,14 @@ body {
   /**font-family: DPDorkDiary;**/
   height: 100%;
   display: grid;
-  grid-template-columns: 22em auto;
+  grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
   grid-template-rows: 12em auto;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   body{
   grid-template-columns: 0em auto;
   }

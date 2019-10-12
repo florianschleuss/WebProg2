@@ -8,7 +8,7 @@ Logo Color:   #845007
 @font-face {
   font-family: 'DPDorkDiary';
   src: url('../assets/DPDorkDiary.ttf')  format('truetype');
-  font-weight: normal;
+  font-weight: bold;
 }
 
 body {
@@ -47,6 +47,7 @@ nav {
 }
 
 .triangle{
+  z-index: 1;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -69,8 +70,6 @@ main {
 /******************* List *******************/
 
 .list{
-  height: 22em;
-
   margin-top: 30em;
   background-color: #ffffff;
 }

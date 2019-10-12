@@ -1,0 +1,22 @@
+<div class="list" *ngIf="list">
+  <h2>{{list.name}}</h2>
+
+
+  <div class="add-item">
+    <input placeholder="Add Item to List" #itemName (keyup.enter)="addItem(itemName.value); itemName.value=''"/>
+    <button (click)="addItem(itemName.value); itemName.value=''">
+      X
+    </button>
+  </div>
+
+  <a *ngFor="let item of  list.items">
+    <div class="">
+        <p (click)="changeItem(item.name)">{{item.name}}</p>
+    </div>
+    <div>
+      <button (click)="remItem(item._id)">
+        X
+      </button>
+    </div>
+  </a>
+</div>

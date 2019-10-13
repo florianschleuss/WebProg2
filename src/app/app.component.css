@@ -5,19 +5,10 @@ Font:         #ed8a63
 Logo Color:   #845007
 **/
 
-@font-face {
-    font-family: 'DPDorkDiary';
-    src: url('../assets/DPDorkDiary.ttf') format('truetype');
-    font-weight: normal;
-}
-
 body {
     /**font-family: DPDorkDiary;**/
     height: 100%;
-    display: grid;
-    grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
-    grid-template-rows: 12em auto;
-    grid-template-areas: "sidebar header" "sidebar main";
+
 }
 
 @media screen and (max-width: 520px) {
@@ -32,26 +23,6 @@ header {
     grid-area: header;
     background-color: #ffffff;
     z-index: 1;
-}
-
-/******************* SIDEBAR *******************/
-
-nav {
-    z-index: -1;
-    background-color: #c9af98;
-    position: relative;
-    grid-area: sidebar;
-}
-
-.triangle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 12em 12em;
-    border-color: transparent transparent #3a4660 transparent;
 }
 
 /******************* MAIN *******************/

@@ -1,18 +1,15 @@
 <head>
 </head>
-<body>
+<body [ngStyle]="getStyles()">
   <header>
-    Header
+    <app-header></app-header>
   </header>
   <nav>
-    Sidebar
-    <div class="triangle">
-    </div>
+    <app-sidebar></app-sidebar>
   </nav>
   <main>
-    <h1>{{title}}</h1>
     <div class="list">
-      <h2>List</h2>
+      <app-list-view></app-list-view>
     </div>
   </main>
 </body>

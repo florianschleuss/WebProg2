@@ -6,9 +6,13 @@ Logo Color:   #845007
 **/
 
 body {
-    /**font-family: DPDorkDiary;**/
     height: 100%;
-
+    display: grid;
+    grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
+    grid-template-rows: 6em auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
 }
 
 @media screen and (max-width: 520px) {
@@ -20,8 +24,18 @@ body {
 /******************* HEADER *******************/
 
 header {
-    background-color: #ffffff;
-    z-index: 1;
+  grid-area: header;
+  background-color: #3a4660;
+  z-index: 1;
+}
+
+/******************* SIDEBAR *******************/
+
+nav {
+    z-index: -1;
+    background-color: #c9af98;
+    position: relative;
+    grid-area: sidebar;
 }
 
 /******************* MAIN *******************/
@@ -35,8 +49,7 @@ main {
 
 /******************* List *******************/
 
-.list {
-    height: 22em;
-    margin-top: 30em;
-    background-color: #ffffff;
+.list{
+  margin: 1em;
+  height: auto;
 }

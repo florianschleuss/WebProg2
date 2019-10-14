@@ -1,1 +1,15 @@
-<app-header></app-header>
+<head>
+</head>
+<body [ngStyle]="getStyles()">
+  <header>
+    <app-header></app-header>
+  </header>
+  <nav>
+    <app-sidebar></app-sidebar>
+  </nav>
+  <main>
+    <div class="list">
+      <app-list-view></app-list-view>
+    </div>
+  </main>
+</body>

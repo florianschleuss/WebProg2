@@ -15,10 +15,10 @@ a {
     color: inherit;
 }
 
-.header {
+/*.header {
     padding: 20px 20px;
     background-color: #3a4660;
-}
+}*/
 
 .header .check-box {
     cursor: pointer;
@@ -39,7 +39,7 @@ a {
     display: none;
 }
 
-#checkbox:checked~#sidebar {
+#checkbox:checked~ #sidebar {
     width: 0;
     -webkit-animation: sidebarAnim 0ms;
     animation: sidebarAnim 0ms;

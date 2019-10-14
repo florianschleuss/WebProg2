@@ -18,7 +18,6 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.getList();
-    console.log(this.id);
   };
 
 
@@ -31,7 +30,6 @@ export class ListComponent implements OnInit {
     name = name.trim();
     if (!name) {console.log('Empty Field'); return; };
     this.listService.addItem(this.id, name).subscribe(list => this.list = list);
-    console.log(this.id + name);
   };
 
   remItem(itemId: string): void {

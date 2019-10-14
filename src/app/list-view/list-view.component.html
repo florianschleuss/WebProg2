@@ -1,3 +1,15 @@
+<h1>{{title}}</h1>
+
+<p>5d931253ac8b120017a74aa5</p>
+<p>5da07da69cbe830017d47ebb</p>
+
+<div class="add-list">
+  <input placeholder="Add List to View" #listId (keyup.enter)="addList(listId.value); listId.value=''"/>
+  <button (click)="addList(listId.value); listId.value=''">
+    X
+  </button>
+</div>
+
 <a *ngFor="let id of lists">
   <app-list [id]="id"></app-list>
 </a>

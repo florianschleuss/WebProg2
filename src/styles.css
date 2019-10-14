@@ -5,3 +5,21 @@ body, html{
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
 }
+
+@font-face {
+    font-family: 'DPDorkDiary';
+    src: url('./assets/DPDorkDiary.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Add application styles & imports to this file! */
+.ng-sidebar {
+    background: red;
+    width: 13rem;
+}
+
+.ng-sidebar--right {
+    color: red !important;
+    background: antiquewhite;
+    width: 12rem;
+}

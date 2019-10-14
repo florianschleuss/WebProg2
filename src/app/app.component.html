@@ -1,13 +1,11 @@
 <head>
 </head>
-<body>
+<body [ngStyle]="getStyles()">
   <header>
-    Header
+    <app-header></app-header>
   </header>
   <nav>
-    Sidebar
-    <div class="triangle">
-    </div>
+    <app-sidebar></app-sidebar>
   </nav>
   <main>
     <div class="list">

@@ -11,6 +11,8 @@
     border-color: transparent transparent #3a4660 transparent;
 }
 
+
+
 /******************* Old stuff *******************/
 
 /*html, body {
@@ -87,3 +89,81 @@ a {
 .navbar-body .nav-item:hover {
     background-color: #3a4660;
 }*/
+
+
+
+#sidebar ul {
+    list-style-type: none;
+    margin: 2em 1em;
+    padding: 10px;
+}
+
+/**
+Blue:         #3a4660
+Beige:        #c9af98
+Font:         #ed8a63
+Logo Color:   #845007
+**/
+
+#sidebar ul li {
+    --c: #3a4660;
+    color: var(--c);
+    font-size: 12px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.9em;
+    width: auto;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, Helvetica;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.1s;
+    margin: 1em;
+}
+
+#sidebar ul {
+    padding: 0;
+}
+
+#sidebar ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #3a4660;
+    transform: translateY(100%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+#sidebar ul li:hover {
+    color: #c9af98;
+}
+
+#sidebar ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+#sidebar ul li span:nth-child(1) {
+    --n: 1;
+}
+
+#sidebar ul li span:nth-child(2) {
+    --n: 2;
+}
+
+#sidebar ul li span:nth-child(3) {
+    --n: 3;
+}
+
+#sidebar ul li span:nth-child(4) {
+    --n: 4;
+}
+

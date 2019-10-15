@@ -26,13 +26,11 @@ body {
 header {
   grid-area: header;
   background-color: #3a4660;
-  z-index: 1;
 }
 
 /******************* SIDEBAR *******************/
 
 nav {
-    z-index: -1;
     background-color: #c9af98;
     position: relative;
     grid-area: sidebar;

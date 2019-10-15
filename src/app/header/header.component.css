@@ -2,12 +2,20 @@
 
 .styling {
     background-color: #3a4660;
+    position: relative;
+}
 
+h1 {
+    color: #ed8a63;
 }
 /******************* Hamburger Menu *******************/
 
 .check-box{
     width: 6em;
+}
+
+.check-box:hover {
+    cursor: pointer;
 }
 
 .line {

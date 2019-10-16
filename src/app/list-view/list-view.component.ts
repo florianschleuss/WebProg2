@@ -15,8 +15,8 @@ export class ListViewComponent implements OnInit {
   constructor(private sidebarComponent: SidebarComponent) { };
 
   ngOnInit() {
-    this.lists =[];                                       //initialize empty list to store list which should be shown
-  };
+    this.lists =['5d931253ac8b120017a74aa5'];                                       //initialize empty list to store list which should be shown
+  }
 
   addList (id: string): void{
     id = id.trim();

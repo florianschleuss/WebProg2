@@ -1,21 +1,24 @@
-<div class="list" *ngIf="list">
-  <h2 onshow="addListToNav(list.name)">{{list.name}}</h2>
+<div class="list card card-1" *ngIf="list">
+    <h2>{{list.name}}</h2>
 
-  <div class="add-item">
-    <input placeholder="Add Item to List" #itemName (keyup.enter)="addItem(itemName.value); itemName.value=''"/>
-    <button (click)="addItem(itemName.value); itemName.value=''">
-      X
-    </button>
-  </div>
+    <div class="inputfield">
 
-  <a *ngFor="let item of list.items">
-    <div>
-        <p (click)="changeItem(item.name)">{{item.name}}</p>
+            <input class="inputeffect" type="text" placeholder="Add Item to List" #itemName (keyup.enter)="addItem(itemName.value); itemName.value=''">
+            <span class="focus-border"></span>
+            <a class="icon-plus button" (click)="addItem(itemName.value); itemName.value=''">
+                    <span>&#43;</span>
+                </a>
+
     </div>
-    <div>
-      <button (click)="remItem(item._id)">
-        X
-      </button>
-    </div>
-  </a>
+
+    <a *ngFor="let item of list.items">
+        <div class="">
+            <p (click)="changeItem(item.name)">{{item.name}}</p>
+        </div>
+        <div>
+            <button (click)="remItem(item._id)">
+                X
+            </button>
+        </div>
+    </a>
 </div>

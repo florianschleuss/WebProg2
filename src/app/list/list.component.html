@@ -1,19 +1,19 @@
 <div class="list card card-1" *ngIf="list">
-    <h2>{{list.name}}</h2>
+    <h2>{{ list.name }}</h2>
 
     <div class="inputfield">
-
-            <input class="inputeffect" type="text" placeholder="Add Item to List" #itemName (keyup.enter)="addItem(itemName.value); itemName.value=''">
-            <span class="focus-border"></span>
-            <a class="menu effect-12" (click)="addItem(itemName.value); itemName.value=''">
-                        <i>+</i>
-            </a>
-
+        <input class="inputeffect" type="text" placeholder="Add Item to List" #itemName
+            (keyup.enter)="addItem(itemName.value); itemName.value = ''" />
+        <span class="focus-border"></span>
+        <a class="button pulse inputbutton" (click)="addItem(itemName.value); itemName.value = ''">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABmJLR0QA/wD/AP+gvaeTAAAFD0lEQVRYhc2YW2xUVRSGv7XPzJkWysAM0nApYoUm5SKXEKJcTDQQynCpIs4TiUGfePLBN4nxxSgx8cFHY4ygAZU0AQTa2gCJkZB4awgQtLQ0hFAYgXaKbel0Zs7Zy4e20M6UttNC4v9yLnvvtf69zr/X3uvA/wgy0YHrq6unFfvFZWJsKVZLMXJXrbmbclJt50+c6H7qZDbG4kuM0deBaoU1gBnBoFX4TeCU4hw7U3vk7ydKZlNs1yqM2Q+6GZCwa+yqSMDMnWKIhISSgKHHs3RmlFsPfC4kPdudVQMoSL0j3r6GU8cuTopMPB53O3v1Y4H3ALN2VpCtZS6LwoFRByrQ3OVR25bh93tZAIvyWfJO9IPGxi+zBZOpqopHbUBPKqyrnB5gz8Iiyqc5Y8wtH63dHgdb0zT/6yGq541vqhsaapLjJlNVFY/aoP6iytIt81zeWliEIxPWOr4qR66n+fFmGhGuuOq+XFv7XWduv7ypxuNxN+Vrg8LqdyqKeXNBEWYSRACMCC9EAriOcLnTK7X46yPhDYcSiUY7rF/uwM5e/Vhh3ZZ5LlVz3UmRyMVr80O8OttFYUNkdvKj3PZhkdkU27VKRA4snu7Iu4unTDoiI2FFNMCl+x6daV1bvnjx8etX/74z2DY8MsbsB8yeRcWT0shoCBrh7YXFAI748skw94M3G2PxJaCbXyoN8lzJ+FdNnw+1bUrajt13EIvCDqufCQJs7febQ0YMOwHZOi80fqvApaTyRZPlYocWNG5bWQhAMLo7nwy6Y1pQbEW4sFzi51zHi8qww9SAqCjbh5GJxXaHFdasjAbN01FKPozAikhAEJa9Eo+XPCSTIVMGmLIpeSv9qWLuVANgnAdmLkAAwIHZFpjujh6XPh8uJpXsELG2dPVrpem+4g95HzSwIioUjfLVZwT7J28cOwdoDgBYsRHo331Hw9lEv1hHwtEbSv8W+Qh7Kw3byh4/wWkDk1erM2EgMiqaFITu7OgrYuMc4ZmQyYvM0RvKGwuEivAjx0EDK2eOHulBf0Zt+0MyQvAf8LmfGT1ZFDnw4qzhDhwD3FAqZwhrZxUm/86B5KRGEjAg4JSTahOwt1MFZK4ngESvBbDZYvOIzMCZ9dcLHZ61heWuCcNX5UIyq8Cln2tqeh6SGUBtj2dNS7dXkFEn5zpeXO2ypHwEtHbw3UMyinMM0Lq2TEFGl0eFvZWGFWOINRd1N9P9bgkcziPTf4qX+t/uZbneM/7kXuTAtjIhVEC+vNbl82dHFlU5NbR6GGbCEW8fYA9eS+E9JS17CgdaUwD+gL9H/oc+tDY33VlYsWRqe1rXP/CUVTODT5zMVy0pGjs8RPn0dN3R74e25QU3eSf6gaieb7id4adbhelnLJy8meZsIgNwLtvb/mFue94iSCQabcXzy47jsP1C0ivt8ZTlkcCkjqCeha9bUhwfqA5CuJtPnz7ZOyYZgNbWv1IV5Ut/wLD+Wrf/7JX7PuUlDjPcwnf1690+nzel+KM9C3AuhLt5pDLlsWQGCUXCGw4Vl6TcjrRdezqRkUTKysyQIRIyY1aULV0+37b28U1rH8m09UX51Ott3zNSRAYxrthvrN61XHyzHzTG0Fp7qiHiCiUBocfTx9Ta1KHy/pm6mstj+Sn4L4QYdgq643F/IQCLyO+ietJaOX62vuav8dqfsCpjsd3hvkDf/IDKbJQoQtL6knBx2+rrD3dN1O7/Bv8BydENkvahSkQAAAAASUVORK5CYII=" />
+        </a>
     </div>
 
     <a *ngFor="let item of list.items">
         <div class="">
-            <p (click)="changeItem(item.name)">{{item.name}}</p>
+            <p (click)="changeItem(item.name)">{{ item.name }}</p>
         </div>
         <div>
             <button (click)="remItem(item._id)">

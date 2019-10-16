@@ -1,3 +1,9 @@
+
+
+.styling {
+    background-color: #3a4660;
+
+}
 /******************* Hamburger Menu *******************/
 
 .check-box{
@@ -37,3 +43,4 @@
     stroke-dasharray: 110 205;
     stroke-dashoffset: -86px;
 }
+

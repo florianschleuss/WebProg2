@@ -8,7 +8,7 @@ Logo Color:   #845007
 body {
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(12em, 22em) minmax(70%, auto);
+    grid-template-columns: minmax(12em, 15em) minmax(70%, auto);
     grid-template-rows: 6em auto;
     grid-template-areas:
       "header header"
@@ -16,26 +16,25 @@ body {
 }
 
 @media screen and (max-width: 520px) {
-    body {
-        grid-template-columns: 0em auto;
-    }
+    
 }
 
 /******************* HEADER *******************/
 
 header {
   grid-area: header;
-  background-color: #3a4660;
   z-index: 1;
 }
 
 /******************* SIDEBAR *******************/
 
 nav {
-    z-index: -1;
     background-color: #c9af98;
     position: relative;
     grid-area: sidebar;
+    border-style: none solid none none;
+    border-color: #3a4660;
+    box-shadow: -2em 0em 3em 1em #000000;
 }
 
 /******************* MAIN *******************/
@@ -44,7 +43,6 @@ main {
     grid-area: main;
     background-color: #c9af98;
     color: #3a4660;
-    box-shadow: 0em 10em 15em 0em #000000;
 }
 
 /******************* List *******************/

@@ -9,19 +9,28 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'ToDo Listen';
     bodyStyle: any ={  }
+    navStyle: any ={  }
 
     gridSidebarToggle(collapsed: boolean): void{
       if (!collapsed){
           this.bodyStyle = {
             gridTemplateColumns: '0em auto'
-          }
+          };
+          this.navStyle = {
+            display: 'none'
+          };
         }
       else {
-        this.bodyStyle = {}
+        this.bodyStyle = {};
+        this.navStyle = {};
       }
-    }
+    };
 
-    getStyles(): any{
+    getBody(): any{
       return this.bodyStyle;
+    };
+
+    getNav(): any{
+      return this.navStyle;
     }
 }

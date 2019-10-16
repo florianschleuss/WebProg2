@@ -20,11 +20,10 @@ export class ListComponent implements OnInit {
     this.getList();
   };
 
-
   getList(): void {
     this.listService.getList(this.id)
       .subscribe(list => this.list = list);
-  };
+  }
 
   addItem(name: string): void {
     name = name.trim();

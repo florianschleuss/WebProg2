@@ -1,14 +1,13 @@
-<a id="sidebar">
-  <div class="navbar-header">
-      <a>Meine Listen</a>
-  </div>
-  <div class="navbar-body">
-      <ul>
-          <li class="nav-item">
-              <a href="">Liste 1</a>
-          </li>
-      </ul>
-  </div>
-</a>
+<div id="sidebar">
+  <p>test</p>
+    <ul>
+        <li *ngFor = "let list of lists">
+            <a class="link" href="#{{list}}">{{list}}
+            <span></span><span></span><span></span><span></span>
+            </a>
+        </li>
+    </ul>
+</div>
+
 <div class="triangle">
 </div>

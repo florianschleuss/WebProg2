@@ -1,15 +1,20 @@
 <h1>{{title}}</h1>
 
-<p>5d931253ac8b120017a74aa5</p>
-<p>5da07da69cbe830017d47ebb</p>
-
-<div class="add-list">
-  <input placeholder="Add List to View" #listId (keyup.enter)="addList(listId.value); listId.value=''"/>
-  <button (click)="addList(listId.value); listId.value=''">
-    X
-  </button>
+<div class="inputfield">
+    <p class="size">5d931253ac8b120017a74aa5</p>
+    <p class="size">5da07da69cbe830017d47ebb</p>
+    <input class="inputeffect" type="text" placeholder="Neue Liste" #listId
+        (keyup.enter)="addList(listId.value); listId.value=''">
+    <span class="focus-border"></span>
+    <a class="inputbutton" (click)="addList(listId.value); listId.value=''">
+        <span>Liste Erstellen</span>
+        <svg width="13px" height="10px" viewBox="0 0 13 10">
+        </svg>
+    </a>
 </div>
 
-<a *ngFor="let id of lists">
-  <app-list [id]="id"></app-list>
-</a>
+<div id="list-grid">
+  <a *ngFor="let id of lists">
+      <app-list [id]="id"></app-list>
+  </a>
+</div>

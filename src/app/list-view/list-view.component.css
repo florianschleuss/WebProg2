@@ -1,0 +1,136 @@
+/******************* Inputfield list-view *******************/
+
+.size {
+    font-size: xx-small;
+}
+
+.inputfield {
+    text-align: center;
+    width: 40%;
+    border-style: #3a4660;
+    position: relative;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+/******************* Inputfield effects *******************/
+
+.inputeffect {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #3a4660;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.inputeffect~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 99;
+}
+
+.inputeffect~.focus-border:before, .inputeffect~.focus-border:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ed8a63;
+    transition: 0.4s;
+}
+
+.inputeffect~.focus-border:after {
+    left: auto;
+    right: 0;
+}
+
+.inputeffect:focus~.focus-border:before, .inputeffect:focus~.focus-border:after {
+    width: 50%;
+    transition: 0.4s;
+}
+
+/******************* Button list-view *******************/
+
+button {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inputbutton {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.inputbutton:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    width: 56px;
+    height: 46px;
+    transition: all 0.3s ease;
+}
+
+.inputbutton span {
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 900;
+    font-family: #3a4660;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.inputbutton svg {
+    position: relative;
+    top: 0;
+    margin-left: 100px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #111;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.inputbutton:hover:before {
+    width: 100%;
+    background: #ed8a63;
+}
+
+.inputbutton:hover svg {
+    transform: translateX(0);
+}
+
+.inputbutton:active {
+    transform: scale(0.96);
+}
+
+/******************* List-view Grid *******************/
+#list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+}

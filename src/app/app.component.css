@@ -9,7 +9,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: minmax(12em, 15em) minmax(70%, auto);
-    grid-template-rows: 6em auto;
+    grid-template-rows: 7em auto;
     grid-template-areas:
       "header header"
       "sidebar main";
@@ -21,8 +21,6 @@ body {
 header {
   grid-area: header;
   z-index: 1;
-  width: 100%;
-  height: 100px;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -37,7 +35,7 @@ nav {
     grid-area: sidebar;
     border-style: none solid none none;
     border-color: #3a4660;
-    box-shadow: -2em 0em 3em 1em #000000;
+    box-shadow: -2em 0em 3em 1em #3a4660;
 }
 
 /******************* MAIN *******************/

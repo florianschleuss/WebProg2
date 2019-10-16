@@ -5,9 +5,9 @@
 
             <input class="inputeffect" type="text" placeholder="Add Item to List" #itemName (keyup.enter)="addItem(itemName.value); itemName.value=''">
             <span class="focus-border"></span>
-            <a class="icon-plus button" (click)="addItem(itemName.value); itemName.value=''">
-                    <span>&#43;</span>
-                </a>
+            <a class="menu effect-12" (click)="addItem(itemName.value); itemName.value=''">
+                        <i>+</i>
+            </a>
 
     </div>
 
@@ -22,3 +22,4 @@
         </div>
     </a>
 </div>
+

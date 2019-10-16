@@ -1,28 +1,25 @@
 .list {
-  background-color: #ffffff;
-  border-style: solid;
-  border-color: #3a4660;
-  margin: 2em;
-  padding: 2em;
-  border-radius: 1em;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #3a4660;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 1em;
 }
 
 h2 {
-  margin: 0 0 1em 0;
-  text-align: center;
+    margin: 0 0 1em 0;
+    text-align: center;
 }
 
-
-  .card-1 {
+.card-1 {
     box-shadow: 0 1px 3px #3a4660, 0 1px 2px #3a4660;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  }
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
 
-  .card-1:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  }
-
-
+.card-1:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
 
 /******************* Inputfield list-view *******************/
 
@@ -92,124 +89,37 @@ textarea:focus, input:focus {
 
 /******************* Button list-view *******************/
 
-button {
-    text-decoration: none;
-    color: inherit;
+.menu, .menu .menu_title, .menu ul li i, .menu ul li i:after, .menu ul li i:before {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
 
-.inputbutton {
-    position: absolute;
+.menu {
+    display: block;
     margin: 0;
     padding: 0;
-    transition: all 0.2s ease;
-    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50px;
 }
 
-.inputbutton:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+.menu i {
+    color: #3a4660;
     display: block;
-    border-radius: 28px;
-    width: 56px;
-    height: 46px;
-    transition: all 0.3s ease;
+    line-height: 50px;
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 50px;
 }
 
-.inputbutton span {
-    position: relative;
-    bottom: 0;
-    font-size: 40px;
-    line-height: 5px;
-    font-weight: 900;
-    font-family: #3a4660;
-    letter-spacing: 0.20em;
-    text-transform: uppercase;
-    vertical-align: middle;
+/* ----- EFFECT 12 - Hover Reveals Shadow */
+
+.menu.effect-12 i {
+    border-radius: 50px;
+    border-color: #3a4660;
 }
 
-.inputbutton svg {
-    position: relative;
-    top: 0;
-    margin-left: 100px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #111;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
+.menu.effect-12 i:hover {
+    border-color: #3a4660;
+    box-shadow: 0 2px 2px #ed8a6355, 0 4px 4px #ed8a6355, 0 8px 8px #ed8a6355, 0 16px 16px #ed8a6355;
 }
-
-.inputbutton:hover:before {
-    width: 100%;
-    background: #ed8a63;
-}
-
-.inputbutton:hover svg {
-    transform: translateX(0);
-}
-
-.inputbutton:active {
-    transform: scale(0.96);
-}
-
-.button {
-    cursor: pointer;
-  }
-
-  .icon-plus {
-    position: absolute;
-    border-radius: 10%;
-    color: transparent;
-    line-height: 27px;
-    font-size: 43px;
-    text-align: center;
-    transition: all .3s;
-    z-index: 1;
-  }
-
-  .icon-plus:before {
-    background-color: #3a4660;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 20%;
-    transform: translateX(-50%);
-    transition: all .3s;
-    z-index: -1;
-  }
-
-  .icon-plus:after {
-    background-color: #3a4660;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    height: 20%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    transition: all .3s;
-    z-index: -1;
-  }
-
-  .icon-plus:hover {
-    color: #ed8a63;
-
-  }
-
-  .icon-plus:hover:before {
-    border-radius: 10%;
-    width: 100%;
-  }
-
-  .icon-plus:hover:after {
-    border-radius: 10%;
-    height: 100%;
-  }

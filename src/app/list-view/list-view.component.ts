@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SidebarComponent } from '../sidebar/sidebar.component'
+
 @Component({
   selector: 'app-list-view',
   templateUrl: './list-view.component.html',
@@ -10,7 +12,7 @@ export class ListViewComponent implements OnInit {
   title = 'ToDo Listen';
   lists: string[];
 
-  constructor() { }
+  constructor(private sidebarComponent: SidebarComponent) { };
 
   ngOnInit() {
     this.lists =['5d931253ac8b120017a74aa5'];                                       //initialize empty list to store list which should be shown
@@ -19,10 +21,11 @@ export class ListViewComponent implements OnInit {
   addList (id: string): void{
     id = id.trim();
     if (this.lists.indexOf(id) === -1 && id != "") {      //add list id to lists array only if not present in there
-      this.lists.push(id)
+      this.lists.push(id);
+      this.sidebarComponent.addToNav(id);
     }
     else {                                                //else print to console
       console.log("This item already exists or is empty");
     }
-  }
+  };
 }

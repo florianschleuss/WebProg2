@@ -45,5 +45,4 @@ export class ListService {
   updateItem (id: string, itemId: string, baught: boolean){
     return this.http.put<List>(this.listUrl.concat(id).concat('/items/').concat(itemId),{baught: baught})
   };
-
 }

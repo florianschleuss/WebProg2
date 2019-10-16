@@ -1,7 +1,19 @@
 .listgrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
+}
+
+@media only screen and (max-width: 1300px) {
+  .listgrid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .listgrid{
+    grid-template-columns: 1fr;
+  }
 }
 
 /******************* Inputfield list-view *******************/
@@ -132,4 +144,11 @@ button {
 
 .inputbutton:active {
     transform: scale(0.96);
+}
+
+/******************* List-view Grid *******************/
+#list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
 }

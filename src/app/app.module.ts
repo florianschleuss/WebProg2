@@ -21,7 +21,7 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [SidebarComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

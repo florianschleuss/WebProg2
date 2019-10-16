@@ -29,8 +29,8 @@ h2 {
 
 .inputfield {
     text-align: center;
-    width: 40%;
-    border-style: #3a4660;
+    max-width: 40%;
+    min-width: 10em;
     position: relative;
     left: 45%;
     transform: translateX(-50%);

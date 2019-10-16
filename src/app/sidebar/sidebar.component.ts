@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -8,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { };
+  @Input()
+  lists: string[];
 
-  ngOnInit() { };
+  constructor() {
+  };
 
+  ngOnInit() {
+        this.lists = [];
+  };
 
-
+  addToNav(name: string){
+    this.lists.push(name);
+    console.log(this.lists)
+  }
 }

@@ -1,5 +1,3 @@
-
-
 .styling {
     background-color: #3a4660;
 }
@@ -10,7 +8,7 @@ h1 {
 /******************* Hamburger Menu *******************/
 
 .check-box{
-    width: 6em;
+    width: 4em;
 }
 
 .check-box:hover {

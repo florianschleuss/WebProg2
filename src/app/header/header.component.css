@@ -1,7 +1,20 @@
+
+
+.styling {
+    background-color: #3a4660;
+}
+
+h1 {
+    color: #ed8a63;
+}
 /******************* Hamburger Menu *******************/
 
 .check-box{
     width: 6em;
+}
+
+.check-box:hover {
+    cursor: pointer;
 }
 
 .line {
@@ -37,3 +50,4 @@
     stroke-dasharray: 110 205;
     stroke-dashoffset: -86px;
 }
+

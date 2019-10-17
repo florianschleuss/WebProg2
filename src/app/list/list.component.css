@@ -5,6 +5,7 @@
     margin: 2em;
     padding: 2em;
     border-radius: 1em;
+    min-width: 15em;
 }
 
 h2 {
@@ -112,20 +113,19 @@ textarea:focus, input:focus {
   .button {
     display: inline-flex;
     align-items: center;
-    background: #ed8a63;
+    background: white;
     box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 90px;
     height: 40px;
-    padding: 0 30px;
+    padding: 0 20px;
     color: #3a4660;
-    font-family: Lato, Arial, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
     transition: background .3s, transform .3s, box-shadow .3s;
     will-change: transform;
   }
   .button:hover {
-    background: #ed8a63;
+    background: white;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
     transform: translate3d(0, -2px, 0);
     cursor: pointer;

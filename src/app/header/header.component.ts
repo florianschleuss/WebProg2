@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  private title = this.appComponent.title;
+    title = this.appComponent.title;
 
   sidebarToggle(): void{
     this.appComponent.gridSidebarToggle(this.collapsed);

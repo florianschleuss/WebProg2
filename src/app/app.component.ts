@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'ToDo Listen';
+    title = 'ToDo App';
     bodyStyle: any ={  }
     navStyle: any ={  }
 

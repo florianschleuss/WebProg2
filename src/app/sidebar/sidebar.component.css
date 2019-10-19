@@ -123,6 +123,7 @@ ul {
 
 .size {
     font-size: 8px;
+    cursor: copy;
 }
 
 .nav li:hover {
@@ -161,11 +162,13 @@ ul.drop-menu {
 }
 
 ul.drop-menu li {
-    background: #318bba;
+    background: #ececec;
+    border: 0.3em solid #1d1145;
 }
 
 ul.drop-menu li:hover {
-    background: #459fce;
+    background: #f5e1e1;
+    border: 0.3em solid #1d1145;
 }
 
 ul.drop-menu li:first-child {

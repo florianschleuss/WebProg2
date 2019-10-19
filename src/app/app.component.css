@@ -3,6 +3,22 @@ Blue:         #3a4660
 Beige:        #c9af98
 Font:         #ed8a63
 Logo Color:   #845007
+
+Bist du gelb?!: #Feda6a
+Silberfuchs: #d4d4dc
+Deep Matte Grey: #393f4d
+Dunkler Schiefer: # 1d1e22
+
+
+rot         #f78888
+gelb        #f3d250
+weiß        #ececec
+hellblau    #90ccf4
+blau        #5da2d5
+
+list        #fef9c7
+list2       #9fedd7
+
 **/
 
 body {
@@ -30,7 +46,7 @@ header {
 /******************* SIDEBAR *******************/
 
 nav {
-    background-color: #c9af98;
+    background-color: #ececec;
     position: relative;
     grid-area: sidebar;
     border-style: none solid none none;
@@ -42,8 +58,7 @@ nav {
 
 main {
     grid-area: main;
-    background-color: #c9af98;
-    color: #3a4660;
+    background-color: #ececec;
 }
 
 /******************* List *******************/

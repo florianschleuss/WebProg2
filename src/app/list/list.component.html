@@ -1,8 +1,7 @@
 <div class="list card card-1" *ngIf="list">
     <h2>{{ list.name }}</h2>
-
     <div class="inputfield">
-        <input class="inputeffect" type="text" placeholder="Add Item to List" #itemName
+        <input class="inputeffect" type="text" placeholder="ToDo hinzufügen" #itemName
             (keyup.enter)="addItem(itemName.value); itemName.value = ''" />
         <span class="focus-border"></span>
         <button class="button inputbutton" (click)="addItem(itemName.value); itemName.value = ''">

@@ -1,5 +1,5 @@
 .styling {
-    background-color: #3a4660;
+    background-color: #1d1145;
 }
 
 .sty {
@@ -9,6 +9,15 @@
     bottom: 0;
     top: 0;
     margin: -0.39em 1em;
+    padding: 0;
+}
+
+.sty2 {
+    color: #ed8a63;
+    position: absolute;
+    left: 830%;
+    bottom: 0;
+    top: 0;
     padding: 0;
 }
 /******************* Hamburger Menu *******************/
@@ -24,7 +33,7 @@
 .line {
     fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #c9af98;
+    stroke: #ed8a63;
     stroke-width: 5.5;
     stroke-linecap: round;
 }
@@ -215,3 +224,13 @@
     overflow: auto;
     text-align: center;
   }
+
+  .clock {
+    padding: 0 50% 0;
+    position: absolute;
+    color: #ed8a63;
+    font-size: 80px;
+    font-family: DPDorkDiary;
+    letter-spacing: 7px;
+}
+

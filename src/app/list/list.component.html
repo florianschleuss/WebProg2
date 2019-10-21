@@ -11,9 +11,8 @@
 
     <a *ngFor="let item of list.items">
             <div class="todo_list">
-
                         <label>
-                            <input type="checkbox" class="hidden_real_check" (click)="changeItem('Test')"/>
+                            <input id="bought" type="checkbox" class="hidden_real_check" (click)="changeItem(item)" (loaded)="checked(item)"/>
                             <div class="todo_element">
                                 <span class="customized_ckeck">
                                     <span class="checkbox">

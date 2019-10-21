@@ -42,7 +42,7 @@ export class ListService {
     .pipe(catchError(this.handleError<List>(new List())));
   };
 
-  updateItem (id: string, itemId: string, baught: boolean){
-    return this.http.put<List>(this.listUrl.concat(id).concat('/items/').concat(itemId),{baught: baught})
+  updateItem (id: string, itemId: string, bought: boolean): Observable<List> {
+    return this.http.put<List>(this.listUrl.concat(id).concat('/items/').concat(itemId),{bought: bought})
   };
 }

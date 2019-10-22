@@ -4,20 +4,7 @@ Beige:        #c9af98
 Font:         #ed8a63
 Logo Color:   #845007
 
-Bist du gelb?!: #Feda6a
-Silberfuchs: #d4d4dc
-Deep Matte Grey: #393f4d
-Dunkler Schiefer: # 1d1e22
-
-
-rot         #f78888
-gelb        #f3d250
-weiß        #ececec
-hellblau    #90ccf4
-blau        #5da2d5
-
-list        #fef9c7
-list2       #9fedd7
+Lila:         #1d1145
 
 **/
 
@@ -26,12 +13,10 @@ body {
     display: grid;
     grid-template-columns: minmax(12em, 15em) minmax(70%, auto);
     grid-template-rows: 4em auto;
-    grid-template-areas:
-      "header header"
-      "sidebar main";
+    grid-template-areas: "header header" "sidebar main";
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
     body {
         grid-template-columns: 0em auto;
     }
@@ -40,13 +25,14 @@ body {
 /******************* HEADER *******************/
 
 /*Integrated fixed Header*/
+
 header {
-  grid-area: header;
-  z-index: 100;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0;
+    grid-area: header;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0;
 }
 
 /******************* SIDEBAR *******************/
@@ -58,10 +44,9 @@ nav {
     border-style: none solid none none;
     border-color: #3a4660;
     box-shadow: -2em 0em 3em 1em #3a4660;
-
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
     nav {
         right: 100%;
         min-width: 12em;
@@ -78,7 +63,7 @@ main {
 
 /******************* List *******************/
 
-.list{
-  margin: 1em;
-  height: auto;
+.list {
+    margin: 1em;
+    height: auto;
 }

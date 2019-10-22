@@ -50,7 +50,7 @@ p {
 }
 
 #sidebar:active {
-    color: #3a4660;
+    color: #1d1145;
 }
 
 #sidebar ul li {
@@ -114,6 +114,8 @@ p {
 #sidebar ul li span:nth-child(4) {
     --n: 4;
 }
+
+/******************* Dropdown menu *******************/
 
 ul {
     list-style: none;

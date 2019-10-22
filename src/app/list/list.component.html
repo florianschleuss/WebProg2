@@ -10,15 +10,15 @@
     </div>
 
     <a *ngFor="let item of list.items">
-        <a *ngFor="let item of list.items">
             <div class="todo_list">
                 <div class="todo_element">
                     <input type="checkbox" id="checkbox" />
-                    <label for="checkbox" class="element_title" (click)="changeItem(item.name)">{{ item.name }}</label>
-                    <a class="buttonsize check"><img (click)="remItem(item._id)"
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAB30lEQVRIie2Vz27TQBDGv5lNrhD7AdKWJ+DClSYRFX/Uh0AKqtQrSiXKCxCJCu6oQYhnAEVQRKpeufQFaBLfscsVe3c4kIi1PXZKxaGHzsXyzHh/629nZoFru+pGmvP8xW5gza8xgJAZW8FgNK9bJDnorzmHIwBxo4FHN5+O4pWg5PXjlkv5M0B3Fq7IWOm29t+eaZB4uNMWthMAtxau02aW3rvx/P0PP4+LH7rUjD0IALStoS/JQX9N+xNhe+xBAOB22mh+KObmQCIgCEJl4xvOYeLDFnJNAGyUsgWhSF6thv9CBImHZksoJ4UPOzl/+aTjLFvn7FcVAkTGyUMiSG5tJXG522MA60p4ugQrsRlb2w32382KARUEqIe8ymqLphL0j7DIEHVae4fTqoRa0AVhKyGAUt6Xssyt3PD/k67mfGpBlyqGGgnryltvRmC2eK4rsSkzutpsLJ1RPNxpO4fqZiTqkTObADSZlk1d+rY0goTsEXS5Zsy429o7nIbP3kTM6OFv8/rWtiLj4gjKgYggICQVkI4vSTAYzZnRrYAlxRFUko6b9gEg3zxXZIh6mu7BYDSHcZsCfPfcp80s3S7mqsXw81U/zDJ8BBAw4/4FL75P+HPxbWsX37VdffsNknvdogO3NcEAAAAASUVORK5CYII="></a>
-                </div>
+                    <label for="checkbox" class="element_title" (click)="changeItem(item.name)">{{ item.name }}
+                            <a class="buttonsize check"><img (click)="remItem(item._id)"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAB30lEQVRIie2Vz27TQBDGv5lNrhD7AdKWJ+DClSYRFX/Uh0AKqtQrSiXKCxCJCu6oQYhnAEVQRKpeufQFaBLfscsVe3c4kIi1PXZKxaGHzsXyzHh/629nZoFru+pGmvP8xW5gza8xgJAZW8FgNK9bJDnorzmHIwBxo4FHN5+O4pWg5PXjlkv5M0B3Fq7IWOm29t+eaZB4uNMWthMAtxau02aW3rvx/P0PP4+LH7rUjD0IALStoS/JQX9N+xNhe+xBAOB22mh+KObmQCIgCEJl4xvOYeLDFnJNAGyUsgWhSF6thv9CBImHZksoJ4UPOzl/+aTjLFvn7FcVAkTGyUMiSG5tJXG522MA60p4ugQrsRlb2w32382KARUEqIe8ymqLphL0j7DIEHVae4fTqoRa0AVhKyGAUt6Xssyt3PD/k67mfGpBlyqGGgnryltvRmC2eK4rsSkzutpsLJ1RPNxpO4fqZiTqkTObADSZlk1d+rY0goTsEXS5Zsy429o7nIbP3kTM6OFv8/rWtiLj4gjKgYggICQVkI4vSTAYzZnRrYAlxRFUko6b9gEg3zxXZIh6mu7BYDSHcZsCfPfcp80s3S7mqsXw81U/zDJ8BBAw4/4FL75P+HPxbWsX37VdffsNknvdogO3NcEAAAAASUVORK5CYII="></a>
+
+                    </label>
+                    </div>
             </div>
-        </a>
     </a>
 </div>

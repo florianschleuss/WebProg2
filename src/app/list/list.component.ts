@@ -11,7 +11,7 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listService: ListService, private sidebarService: SidebarService) { }
+  constructor(private listService: ListService) { }
 
   @Input()
   id : string;
@@ -19,9 +19,6 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.getList();
   };
-
-  clock = setInterval (() => {this.showTime ();}, 1000);
-
 
   getList(): void {
     this.listService.getList(this.id)
@@ -45,9 +42,9 @@ export class ListComponent implements OnInit {
 
 
 
-  checked(item: any){
-    document.getElementById("bought").style.textDecoration = "underline";
-    console.log('under')
-  }
+  //checked(item: any){
+  //  document.getElementById("bought").style.textDecoration = "underline";
+  //  console.log('under')
+  //}
 
 }

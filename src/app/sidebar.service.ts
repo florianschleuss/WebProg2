@@ -9,7 +9,7 @@ import { ListService} from './list.service';
 export class SidebarService {
 
   private sidebarId: string[] = [];
-  private sidebarElements: string[] = [];
+  private sidebarElements: any[] = [];
 
   constructor(private listService: ListService) {
   };
@@ -21,7 +21,7 @@ export class SidebarService {
       this.idToName(id);
     }
     else {
-      console.log("This item already exists or is empty");
+      console.log("This item already exists in Sidebar or is empty");
     }
   };
 
@@ -29,11 +29,13 @@ export class SidebarService {
     return this.sidebarElements;
   }
 
+  getIdLists(): string[]{
+    return this.sidebarId;
+  }
+
   idToName(id: string): void{
-    var name: string;
-    console.log(id);
     this.listService.getList(id).toPromise().then(list => {
-      this.sidebarElements.push( list.name );
+      this.sidebarElements.push( {name: list.name, id: id} );
     });
   }
 }

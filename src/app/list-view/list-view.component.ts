@@ -10,26 +10,26 @@ import { SidebarService } from '../sidebar.service'
 export class ListViewComponent implements OnInit {
 
   title = 'ToDo Listen';
-  lists: string[];
+  lists: string[] = [];
 
   constructor(private sidebarService: SidebarService) { };
 
   ngOnInit() {
-    this.lists =[];                                       //initialize empty list to store list which should be shown
+    if(this.lists = []){
+      for (var id of this.sidebarService.getIdLists()) {
+        this.addList(id);
+      }
+    }
   }
 
   addList (id: string): void{
     id = id.trim();
-    if (this.lists.indexOf(id) === -1 && id != "") {      //add list id to lists array only if not present in there
+    if (this.lists.indexOf(id) === -1 && id != "") {
       this.lists.push(id);
-    this.addListToSidebar(id);
+    this.sidebarService.addList(id);
     }
-    else {                                                //else print to console
-      console.log("This item already exists or is empty");
+    else {
+      console.log("This item already exists in List-View or is empty");
     }
   };
-
-  addListToSidebar(id: string):void {
-    this.sidebarService.addList(id);
-  }
 }

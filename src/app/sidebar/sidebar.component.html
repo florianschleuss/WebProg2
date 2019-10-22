@@ -16,12 +16,12 @@
 <div id="sidebar">
     <ul>
         <li>
-            Alle Listen
+            <a routerLink="/list-view">Alle Listen</a>
             <span></span><span></span><span></span><span></span>
         </li>
         <a *ngFor="let item of lists">
             <li>
-                {{item}}
+                <a routerLink="/list/{{item.id}}">{{item.name}}</a>
                 <span></span><span></span><span></span><span></span>
               </li>
         </a>

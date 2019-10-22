@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { ListService} from '../list.service';
-import { SidebarService} from '../sidebar.service';
 import { List } from '../list';
 
 @Component({
@@ -11,7 +11,7 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService, private route: ActivatedRoute) { }
 
   @Input()
   id : string;
@@ -21,6 +21,9 @@ export class ListComponent implements OnInit {
   };
 
   getList(): void {
+    if(this.route.snapshot.paramMap.get('id')!=null){
+      this.id = this.route.snapshot.paramMap.get('id');
+    }
     this.listService.getList(this.id)
       .subscribe(list => this.list = list);
   }

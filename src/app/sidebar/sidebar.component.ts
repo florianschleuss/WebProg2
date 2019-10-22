@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { SidebarService} from '../sidebar.service';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -9,19 +11,14 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
   @Input()
-  lists: string[];
+  lists: any[];
 
-  constructor() {
+  constructor(private sidebarService: SidebarService) {
   };
 
   ngOnInit() {
-        this.lists = [];
+        this.lists = this.sidebarService.getLists();
   };
-
-  addToNav(name: string){
-    this.lists.push(name);
-    console.log(this.lists)
-  }
 
   copyMessage(val: string){
     const selBox = document.createElement('textarea');

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { ListService} from '../list.service';
 import { List } from '../list';
@@ -10,7 +11,7 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService, private route: ActivatedRoute) { }
 
   @Input()
   id : string;
@@ -20,6 +21,9 @@ export class ListComponent implements OnInit {
   };
 
   getList(): void {
+    if(this.route.snapshot.paramMap.get('id')!=null){
+      this.id = this.route.snapshot.paramMap.get('id');
+    }
     this.listService.getList(this.id)
       .subscribe(list => this.list = list);
   }
@@ -35,8 +39,15 @@ export class ListComponent implements OnInit {
       .subscribe(list => this.list = list);
   }
 
-  changeItem(itemId: string): void {
-    console.log(itemId);
+  changeItem(item: any): void {
+    this.listService.updateItem(this.id, item._id, !item.bought).subscribe(list => this.list = list);
   }
+
+
+
+  //checked(item: any){
+  //  document.getElementById("bought").style.textDecoration = "underline";
+  //  console.log('under')
+  //}
 
 }

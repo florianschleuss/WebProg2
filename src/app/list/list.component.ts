@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ListService} from '../list.service';
+import { SidebarService} from '../sidebar.service';
 import { List } from '../list';
 
 @Component({
@@ -10,7 +11,7 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService, private sidebarService: SidebarService) { }
 
   @Input()
   id : string;
@@ -42,20 +43,7 @@ export class ListComponent implements OnInit {
     this.listService.updateItem(this.id, item._id, !item.bought).subscribe(list => this.list = list);
   }
 
-  pad(x: number) {
-      return (x < 10 ? '0' : '') + x
-  }
 
-  showTime(): void {
-    var date = new Date();
-    var h = this.pad(date.getHours()); // 0 - 23
-    var m = this.pad(date.getMinutes()); // 0 - 59
-    var s = this.pad(date.getSeconds()); // 0 - 59
-
-    var time: string = h + ":" + m + ":" + s;
-    document.getElementById("clock").innerText = time;
-    document.getElementById("clock").textContent = time;
-  }
 
   checked(item: any){
     document.getElementById("bought").style.textDecoration = "underline";

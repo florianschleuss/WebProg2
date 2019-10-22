@@ -116,3 +116,152 @@ p {
 }
 
 
+
+ul {
+    list-style: none;
+}
+
+.size {
+    font-size: 8px;
+    cursor: copy;
+}
+
+.nav li:hover {
+    background: #1d1145;
+}
+
+.nav>ul {
+    list-style: none;
+    margin: 2em 1em;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav>ul>li {
+    width: auto;
+    height: 3em;
+    line-height: 3em;
+    position: relative;
+    cursor: pointer;
+    color: #ed8a63;
+    font-size: 12px;
+    border: 0.3em solid #1d1145;
+    border-radius: 0.9em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+ul.drop-menu {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
+}
+
+ul.drop-menu li {
+    background: #ececec;
+    border: 0.3em solid #1d1145;
+}
+
+ul.drop-menu li:hover {
+    background: #f5e1e1;
+    border: 0.3em solid #1d1145;
+}
+
+ul.drop-menu li:first-child {
+    border-radius: 0.9em;
+}
+
+ul.drop-menu li:last-child {
+    border-radius: 0.9em;
+}
+
+ul.drop-menu li {
+    display: none;
+}
+
+li:hover>ul.drop-menu li {
+    display: block;
+}
+
+li:hover>ul.drop-menu.menu-3 {
+    perspective: 1000px;
+}
+
+li:hover>ul.drop-menu.menu-3 li {
+    transform-origin: top center;
+    opacity: 0;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(1) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: -150ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(2) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(3) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 150ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(4) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(5) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 450ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+li:hover>ul.drop-menu.menu-3 li:nth-child(6) {
+    animation-name: menu-3;
+    animation-duration: 300ms;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes menu-3 {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    70% {
+        transform: rotateY(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+
+.fade_rule {
+    height: 2px;
+    width: auto;
+    margin: 0 20px;
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #f0d0c3), color-stop(0.5, #ed8a63), color-stop(0.98, #f0d0c3) );
+}

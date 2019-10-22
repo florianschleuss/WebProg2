@@ -31,12 +31,18 @@ body {
       "sidebar main";
 }
 
+@media only screen and (max-width: 480px){
+    body {
+        grid-template-columns: 0em auto;
+    }
+}
+
 /******************* HEADER *******************/
 
 /*Integrated fixed Header*/
 header {
   grid-area: header;
-  z-index: 1;
+  z-index: 100;
   position: fixed;
   top: 0px;
   right: 0px;
@@ -52,6 +58,15 @@ nav {
     border-style: none solid none none;
     border-color: #3a4660;
     box-shadow: -2em 0em 3em 1em #3a4660;
+
+}
+
+@media only screen and (max-width: 480px){
+    nav {
+        right: 100%;
+        min-width: 12em;
+        z-index: 1;
+    }
 }
 
 /******************* MAIN *******************/

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AppComponent } from '../app.component';
+import { ThemeService } from '../theme.service';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-header',
@@ -10,8 +13,19 @@ import { AppComponent } from '../app.component';
 export class HeaderComponent implements OnInit {
 
   private collapsed: boolean = false;
+  darkTheme =  new FormControl(false);
 
-  constructor(private appComponent: AppComponent) { }
+
+  constructor(private appComponent: AppComponent, private themeService: ThemeService) {
+    this.darkTheme.valueChanges.subscribe(value => {
+        if (value) {
+          this.themeService.toggleDark();
+        } else {
+          this.themeService.toggleLight();
+        }
+      });
+    };
+
 
   ngOnInit() {
   }

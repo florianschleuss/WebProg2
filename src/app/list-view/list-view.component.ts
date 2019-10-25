@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SidebarService } from '../sidebar.service'
+import { ThemeService } from '../theme.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-list-view',
@@ -12,7 +14,17 @@ export class ListViewComponent implements OnInit {
   title = 'ToDo Listen';
   lists: string[] = [];
 
-  constructor(private sidebarService: SidebarService) { };
+  darkTheme =  new FormControl(false);
+
+  constructor(private sidebarService: SidebarService, private themeService: ThemeService) {
+    this.darkTheme.valueChanges.subscribe(value => {
+        if (value) {
+          this.themeService.toggleDark();
+        } else {
+          this.themeService.toggleLight();
+        }
+      });
+   };
 
   ngOnInit() {
     if(this.lists = []){

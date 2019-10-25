@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { ListService} from '../list.service';
 import { List } from '../list';
+import { ThemeService } from '../theme.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -11,7 +13,17 @@ import { List } from '../list';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private listService: ListService, private route: ActivatedRoute) { }
+    darkTheme =  new FormControl(false);
+
+  constructor(private listService: ListService, private route: ActivatedRoute, private themeService: ThemeService) {
+    this.darkTheme.valueChanges.subscribe(value => {
+        if (value) {
+          this.themeService.toggleDark();
+        } else {
+          this.themeService.toggleLight();
+        }
+      });
+  }
 
   @Input()
   id : string;
@@ -42,9 +54,6 @@ export class ListComponent implements OnInit {
   changeItem(item: any): void {
     this.listService.updateItem(this.id, item._id, !item.bought).subscribe(list => this.list = list);
   }
-
-
-
   //checked(item: any){
   //  document.getElementById("bought").style.textDecoration = "underline";
   //  console.log('under')

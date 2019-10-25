@@ -2,6 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { SidebarService} from '../sidebar.service';
 
+import { ThemeService } from '../theme.service';
+import { FormControl } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-sidebar',
@@ -13,8 +17,17 @@ export class SidebarComponent implements OnInit {
   @Input()
   lists: any[];
 
-  constructor(private sidebarService: SidebarService) {
-  };
+  darkTheme =  new FormControl(false);
+
+  constructor(private sidebarService: SidebarService, private themeService: ThemeService) {
+    this.darkTheme.valueChanges.subscribe(value => {
+        if (value) {
+          this.themeService.toggleDark();
+        } else {
+          this.themeService.toggleLight();
+        }
+      });
+    };
 
   ngOnInit() {
         this.lists = this.sidebarService.getLists();
@@ -33,4 +46,5 @@ export class SidebarComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(selBox);
   }
+
 }

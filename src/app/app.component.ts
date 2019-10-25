@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
     selector: 'app-root',
@@ -33,4 +34,5 @@ export class AppComponent {
     getNav(): any{
       return this.navStyle;
     }
+
 }

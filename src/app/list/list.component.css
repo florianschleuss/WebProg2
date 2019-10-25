@@ -1,7 +1,7 @@
 .list {
-    background-color: #ffffff;
+    background-color: var(--list-color);
     border-style: solid;
-    border-color: #1d1145;
+    border-color: var(--triangle);
     margin: 2em;
     padding: 2em;
     border-radius: 1em;
@@ -23,7 +23,8 @@
 
 input[type="text"] {
     font: 15px/24px "Lato", Arial, sans-serif;
-    color: #333;
+    font-family: DPDorkDiary;
+    color: var(--text-color);
     width: 100%;
     box-sizing: border-box;
     letter-spacing: 1px;
@@ -147,6 +148,10 @@ textarea:focus, input:focus {
     padding: 10px 0;
 }
 
+.todo_element label {
+    font-family: DPDorkDiary;
+    font-size: 1em;
+}
 .todo_list span:last-child .todo_element {
     border-bottom: none;
 }
@@ -182,7 +187,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]+label:before {
     content: "\2714";
-    border: 0.1em solid #1d1145;
+    border: 0.1em solid var(--text-color);
     border-radius: 0.2em;
     display: inline-block;
     width: 1em;

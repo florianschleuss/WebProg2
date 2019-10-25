@@ -1,9 +1,9 @@
 .styling {
-    background-color: #1d1145;
+    background-color: var(--triangle);
 }
 
 .sty {
-    color: #ed8a63;
+    color: var(--lila);
     position: absolute;
     left: 10%;
     bottom: 0;
@@ -25,7 +25,7 @@
 .line {
     fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #ed8a63;
+    stroke: var(--lila);
     stroke-width: 5.5;
     stroke-linecap: round;
 }
@@ -100,14 +100,14 @@
     content: "";
     left: 0;
     justify-content: flex-end;
-    background-color: #ed8a63;
+    background-color: var(--lila);
 }
 
 .hover:after {
     content: "";
     right: 0;
     justify-content: flex-start;
-    background-color: #ed8a63;
+    background-color: var(--lila);
 }
 
 .hover:hover {
@@ -143,7 +143,7 @@
     font-weight: 700;
     opacity: 1;
     z-index: 2;
-    color: #1d1145;
+    color: var(--triangle);
 }
 
 .hover .social-link {
@@ -203,7 +203,7 @@
     opacity: 1;
 }
 
-.popup {
+.popup1 {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -214,7 +214,7 @@
     transition: all 2s ease-in-out;
 }
 
-.popup .close {
+.popup1 .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -225,7 +225,7 @@
     color: #333;
 }
 
-.popup .content {
+.popup1 .content {
     max-height: 30%;
     overflow: auto;
     text-align: center;

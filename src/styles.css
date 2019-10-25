@@ -12,14 +12,11 @@ body, html{
     font-weight: normal;
 }
 
-/* Add application styles & imports to this file! */
-.ng-sidebar {
-    background: red;
-    width: 13rem;
-}
-
-.ng-sidebar--right {
-    color: red !important;
-    background: antiquewhite;
-    width: 12rem;
-}
+:root {
+    --primary-color: #ececec;
+    --background-color: #ececec;
+    --text-color: #2d2d2d;
+    --triangle: #1d1145;
+    --lila: #ed8a63;
+    --list-color: #ececec;
+  }

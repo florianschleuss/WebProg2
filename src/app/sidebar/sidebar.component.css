@@ -1,490 +1,432 @@
 :host {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 /******************* Triangle and Logo from Sidebar *******************/
 
 .triangle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 12em 12em;
-    border-color: transparent transparent var(--triangle) transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 12em 12em;
+  border-color: transparent transparent var(--triangle) transparent;
 }
 
 .github-icon {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding: 0.5em;
-    margin: 0.6em 0;
-    float: left;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.5em;
+  margin: 0.6em 0;
+  float: left;
 }
 
 .angular-icon {
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    padding: 0.5em;
-    margin: 0.6em 0;
-    float: left;
-    color: var(--triangle)
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  padding: 0.5em;
+  margin: 0.6em 0;
+  float: left;
+  color: var(--triangle);
 }
 
 .rights {
-    margin: 0;
-    color: var(--lila);
+  margin: 0;
+  color: var(--lila);
 }
 
 p {
-    margin: 0;
-    font-size: 10px;
-    color: #ed8a63;
+  margin: 0;
+  font-size: 10px;
+  color: #ed8a63;
 }
 
 .logo {
-    bottom: 0;
-    right: auto;
-    width: auto;
-    height: 0;
+  bottom: 0;
+  right: auto;
+  width: auto;
+  height: 0;
 }
 
 /******************* Sidebar with Hovereffects *******************/
 
 #sidebar ul {
-    list-style-type: none;
-    margin: 2em 1em;
-    padding: 10px;
-    -webkit-font-smoothing: antialiased;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    transition: 1s;
+  list-style-type: none;
+  margin: 2em 1em;
+  padding: 10px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
 }
 
 #sidebar a {
-    text-decoration: none;
-    color: var(--triangle);
+  text-decoration: none;
+  color: var(--triangle);
 }
 
 #sidebar a:hover {
-    text-decoration: none;
-    color: var(--lila);
+  text-decoration: none;
+  color: var(--lila);
 }
 
 #sidebar:active {
-    color: var(--lila);
+  color: var(--lila);
 }
 
 #sidebar ul li {
-    border-color: var(--triangle);
-    font-size: 12px;
-    border: 0.3em solid var(--triangle);
-    border-radius: 0.9em;
-    width: auto;
-    height: 3em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-align: center;
-    line-height: 3em;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: 0.1s;
-    margin: 1em;
+  border-color: var(--triangle);
+  font-size: 12px;
+  border: 0.3em solid var(--triangle);
+  border-radius: 0.9em;
+  width: auto;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.1s;
+  margin: 1em;
 }
 
 #sidebar ul {
-    padding: 0;
+  padding: 0;
 }
 
 #sidebar ul li span {
-    position: absolute;
-    width: 65%;
-    height: 100%;
-    background-color: var(--triangle);
-    transform: translateY(100%);
-    border-radius: 50%;
-    left: calc((var(--n) - 1) * 15%);
-    transition: 0.5s;
-    transition-delay: calc((var(--n) - 1) * 0.1s);
-    z-index: -1;
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  background-color: var(--triangle);
+  transform: translateY(100%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 15%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
 }
 
 #sidebar ul li:hover {
-    color: var(--lila);
-    cursor: pointer;
+  color: var(--lila);
+  cursor: pointer;
 }
 
 #sidebar ul li:hover span {
-    transform: translateY(0) scale(2);
+  transform: translateY(0) scale(2);
 }
 
 #sidebar ul li span:nth-child(1) {
-    --n: 1;
+  --n: 1;
 }
 
 #sidebar ul li span:nth-child(2) {
-    --n: 2;
+  --n: 2;
 }
 
 #sidebar ul li span:nth-child(3) {
-    --n: 3;
+  --n: 3;
 }
 
 #sidebar ul li span:nth-child(4) {
-    --n: 4;
+  --n: 4;
 }
 
 /******************* Dropdown menu *******************/
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .size {
-    font-size: 70%;
-    cursor: copy;
+  font-size: 70%;
+  cursor: copy;
 }
 
 .nav li:hover {
-    background: var(--triangle);
+  background: var(--triangle);
 }
 
-.nav>ul {
-    list-style: none;
-    margin: 2em 1em;
-    padding: 10px;
-    color: rgba(255, 255, 255, 0.7);
+.nav > ul {
+  list-style: none;
+  margin: 2em 1em;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.nav>ul>li {
-    width: auto;
-    height: 3em;
-    line-height: 3em;
-    position: relative;
-    cursor: pointer;
-    color: #ed8a63;
-    font-size: 12px;
-    border: 0.3em solid var(--triangle);
-    border-radius: 0.9em;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-align: center;
+.nav > ul > li {
+  width: auto;
+  height: 3em;
+  line-height: 3em;
+  position: relative;
+  cursor: pointer;
+  color: #ed8a63;
+  font-size: 12px;
+  border: 0.3em solid var(--triangle);
+  border-radius: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
-.nav>ul>li:hover {
-    color: var(--lila);
+.nav > ul > li:hover {
+  color: var(--lila);
 }
 
 ul.drop-menu {
-    position: absolute;
-    top: 100%;
-    left: 0%;
-    width: 100%;
-    padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  padding: 0;
 }
 
 ul.drop-menu li {
-    background: #ececec;
-    border: 0.3em solid var(--triangle);
+  background: #ececec;
+  border: 0.3em solid var(--triangle);
 }
 
 ul.drop-menu li:hover {
-    background: #f5e1e1;
-    border: 0.3em solid var(--triangle);
+  background: #f5e1e1;
+  border: 0.3em solid var(--triangle);
 }
 
 ul.drop-menu li:first-child {
-    border-radius: 0.9em;
+  border-radius: 0.9em;
 }
 
 ul.drop-menu li:last-child {
-    border-radius: 0.9em;
+  border-radius: 0.9em;
 }
 
 ul.drop-menu li {
-    display: none;
+  display: none;
 }
 
-li:hover>ul.drop-menu li {
-    display: block;
+li:hover > ul.drop-menu li {
+  display: block;
 }
 
-li:hover>ul.drop-menu.menu {
-    perspective: 1000px;
+li:hover > ul.drop-menu.menu {
+  perspective: 1000px;
 }
 
-li:hover>ul.drop-menu.menu li {
-    transform-origin: top center;
-    opacity: 0;
+li:hover > ul.drop-menu.menu li {
+  transform-origin: top center;
+  opacity: 0;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(1) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: -150ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(1) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: -150ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(2) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: 0ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(2) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(3) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: 150ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(3) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: 150ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(4) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: 300ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(4) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(5) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: 450ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(5) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: 450ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
-li:hover>ul.drop-menu.menu li:nth-child(6) {
-    animation-name: menu;
-    animation-duration: 300ms;
-    animation-delay: 600ms;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+li:hover > ul.drop-menu.menu li:nth-child(6) {
+  animation-name: menu;
+  animation-duration: 300ms;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes menu {
-    0% {
-        opacity: 0;
-        transform: rotateY(90deg);
-    }
-    70% {
-        transform: rotateY(-10deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotateY(0deg);
-    }
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  70% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
 }
 
 .middle_line {
-    height: 2px;
-    width: auto;
-    margin: 0 20px;
-    background-color: var(--triangle)
+  height: 2px;
+  width: auto;
+  margin: 0 20px;
+  background-color: var(--triangle);
 }
-
-
-
-
-
-
-
-
-
-
 
 .tgl {
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-    margin: 0 20%;
-    margin-bottom: 20px;
-    padding: 1em 1em 0 1em;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 20%;
+  margin-bottom: 20px;
+  padding: 1em 1em 0 1em;
 }
 
 
-.tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl+.tgl-btn {
-    box-sizing: border-box;
+
+
+
+
+.button-con {
+  cursor: default;
+  position: relative;
+  margin-left: -76px;
+  margin-top: -18px;
+  margin: 1.2em 0;
+  left: 20%;
 }
 
-.tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl+.tgl-btn::selection {
-    background: none;
+#dayIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  top: -3px;
+  margin: 0 7px;
+  fill: var(--triangle);
 }
 
-.tgl span {
-    position: relative;
-    display: block;
-    height: 1.8em;
-    line-height: 1.2em;
-    overflow: hidden;
-    font-weight: normal;
-    text-align: center;
-    border-radius: 2em;
-    padding: 0.2em 1em;
-    border: 1px solid #fafafa;
-    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 2px 0 rgba(255, 255, 255, 0.7);
-    transition: color 0.3s ease, padding 0.3s ease-in-out, background 0.3s ease-in-out;
+#nightIcon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  top: -3px;
+  margin: 0 7px;
+  fill: var(--triangle);
 }
 
-.tgl span:before {
-    position: relative;
-    display: block;
-    line-height: 1.3em;
-    padding: 0 0.2em;
-    font-size: 1em;
+#dayIcon,
+#nightIcon {
+  cursor: pointer;
 }
 
-.tgl span:after {
-    position: absolute;
-    display: block;
-    content: '';
-    border-radius: 2em;
-    width: 1.3em;
-    height: 1.3em;
-    margin-left: -1.45em;
-    top: 0.2em;
-    background: #FFFFFF;
-    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 0.97), background 0.3s ease-in-out;
+.toggle {
+  display: none;
 }
 
-.tgl input[type="checkbox"] {
-    display: none !important;
+.toggle,
+.toggle:after,
+.toggle:before,
+.toggle *,
+.toggle *:after,
+.toggle *:before,
+.toggle + .toggle-button {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.tgl input[type="checkbox"]:not(:checked)+span {
-    background: #de474e;
-    color: #FFFFFF;
-    padding-left: 1.6em;
-    padding-right: 0.4em;
+.toggle::-moz-selection,
+.toggle:after::-moz-selection,
+.toggle:before::-moz-selection,
+.toggle *::-moz-selection,
+.toggle *:after::-moz-selection,
+.toggle *:before::-moz-selection,
+.toggle + .toggle-button::-moz-selection {
+  background: none;
 }
 
-.tgl input[type="checkbox"]:not(:checked)+span:before {
-    content: attr(data-off);
-    color: #FFFFFF;
+.toggle::selection,
+.toggle:after::selection,
+.toggle:before::selection,
+.toggle *::selection,
+.toggle *:after::selection,
+.toggle *:before::selection,
+.toggle + .toggle-button::selection {
+  background: none;
 }
 
-.tgl input[type="checkbox"]:not(:checked)+span:after {
-    background: #FFFFFF;
-    left: 1.6em;
+.toggle + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid var(--triangle);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.tgl input[type="checkbox"]:checked+span {
-    background: #1d1145;
-    color: #FFFFFF;
-    padding-left: 0.4em;
-    padding-right: 1.6em;
+.toggle + .toggle-button:after,
+.toggle + .toggle-button:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
 }
 
-.tgl input[type="checkbox"]:checked+span:before {
-    content: attr(data-on);
+.toggle + .toggle-button:after {
+  left: 0;
 }
 
-.tgl input[type="checkbox"]:checked+span:after {
-    background: #FFFFFF;
-    left: 100%;
+.toggle + .toggle-button:before {
+  display: none;
 }
 
-.tgl input[type="checkbox"]:disabled, .tgl input[type="checkbox"]:disabled+span, .tgl input[type="checkbox"]:read-only, .tgl input[type="checkbox"]:read-only+span {
-    cursor: not-allowed;
+.toggle:checked + .toggle-button:after {
+  left: 50%;
 }
 
-.tgl-gray input[type="checkbox"]:not(:checked)+span {
-    background: #e3e3e3;
-    color: #999999;
+.toggle + .toggle-button {
+  padding: 2px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: 2px solid var(--triangle);
+  border-radius: 2em;
 }
 
-.tgl-gray input[type="checkbox"]:not(:checked)+span:before {
-    color: #999999;
+.toggle + .toggle-button:after {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background: var(--triangle);
+  content: "";
+  border-radius: 1em;
 }
 
-.tgl-gray input[type="checkbox"]:not(:checked)+span:after {
-    background: #ffffff;
-}
-
-.tgl-inline {
-    display: inline-block !important;
-    vertical-align: top;
-}
-
-.tgl-inline.tgl {
-    font-size: 16px;
-}
-
-.tgl-inline.tgl span {
-    min-width: 50px;
-}
-
-.tgl-inline.tgl span:before {
-    line-height: 1.4em;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
-}
-
-.tgl-inline-label {
-    display: inline-block !important;
-    vertical-align: top;
-    line-height: 26px;
-}
-
-body {
-    background: url(https://subtlepatterns.com/patterns/billie_holiday.png);
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serifsans !important;
-}
-
-.simple-toggle {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 30px;
-    text-align: center;
-    margin: auto;
-}
-
-.title, .subtitle {
-    display: block;
-    -webkit-font-smoothing: antialiased !important;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-}
-
-.title {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: bold;
-    color: #262626;
-}
-
-.subtitle {
-    margin-bottom: 20px;
-    opacity: 0.4;
-}
-
-.code {
-    display: inline-block;
-    color: grey;
-    border-radius: 5px;
-    border: 1px solid #c9c9c9;
-    background-color: #d6d6d6;
-    margin: 10px;
-    text-align: left;
-    padding: 10px 10px 0 0;
-    line-height: 0.6em;
-    max-width: 300px;
-}
-
-.footer {
-    margin-top: 30px;
-    font-size: 14px;
-    opacity: 0.4;
+.toggle:checked + .toggle-button:after {
+  left: 50%;
 }

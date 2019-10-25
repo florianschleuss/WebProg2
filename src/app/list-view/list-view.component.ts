@@ -45,3 +45,8 @@ export class ListViewComponent implements OnInit {
     }
   };
 }
+
+//Funktion zum automatischen Einfügen aus dem Clipboard
+  //async function paste(input) {
+  //  const text = await navigator.clipboard.readText();
+  //  input.value = text;

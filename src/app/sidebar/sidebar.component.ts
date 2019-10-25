@@ -47,4 +47,5 @@ export class SidebarComponent implements OnInit {
     document.body.removeChild(selBox);
   }
 
+
 }

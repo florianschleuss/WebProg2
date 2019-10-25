@@ -347,7 +347,6 @@ li:hover>ul.drop-menu.menu li:nth-child(6) {
 }
 
 .tgl span:after {
-    color: blue;
     position: absolute;
     display: block;
     content: '';

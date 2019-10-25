@@ -204,6 +204,10 @@ input[type="checkbox"]+label:active:before {
     transform: scale(0);
 }
 
+input[type="checkbox"]:checked+label:after {
+    color: red;
+}
+
 input[type="checkbox"]:checked+label:before {
     background-color: #ed8a63;
     border-color: #ed8a63;
@@ -220,3 +224,8 @@ input[type="checkbox"]:checked:disabled+label:before {
     background-color: #ed8a63;
     border-color: #1d1145;
 }
+
+  input[type=checkbox]:checked + label {
+    color: var(--triangle);
+    text-decoration: line-through;
+  }

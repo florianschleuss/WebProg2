@@ -2,10 +2,17 @@
     background-color: var(--list-color);
     border-style: solid;
     border-color: var(--triangle);
+    color: var(--text-color);
     margin: 2em;
     padding: 2em;
     border-radius: 1em;
     min-width: 15em;
+    box-shadow: 0 1px 3px #3a4660, 0 1px 2px #3a4660;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.list:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 /******************* Inputfield list-view *******************/
@@ -23,7 +30,6 @@
 input[type="text"] {
     font: 15px/24px "Lato", Arial, sans-serif;
     font-family: DPDorkDiary;
-    color: var(--text-color);
     width: 100%;
     box-sizing: border-box;
     letter-spacing: 1px;

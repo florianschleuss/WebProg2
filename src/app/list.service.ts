@@ -1,30 +1,39 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { List } from './list'
 
-@Injectable({                                                                 //made it @Injectable in 'root' so every component in this project
-  providedIn: 'root'                                                          //can use this service
+@Injectable({
+  providedIn: 'root'
 })
 
 export class ListService {
 
   private listUrl = 'https://shopping-lists-api.herokuapp.com/api/v1/lists/'; // URL to web api
+  private apiKey = "2a54bd22f4d6114f201939cc135c28e3";
+
+  private httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': this.apiKey
+    })
+  };
 
   constructor( private http: HttpClient ) {
   };
 
-  private handleError<T> (result?: T) {                                       //configurable error handler for network issues
+  private handleError<T> (result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       return of(result as T);
     };
   };
+  getLists(): Observable<List[]>{
+    return this.http.get<List[]>(this.listUrl, this.httpOptions)
+  }
 
-  //Methods to manipulate and get lists via web api
-  //Error handling: handleError() method
 
   getList (id: string): Observable<List> {
     if (id == undefined){return;}
@@ -32,6 +41,16 @@ export class ListService {
     .pipe(catchError(this.handleError<List>(new List()))
     );
   };
+
+  addList (name: string): Observable<List>{
+    return this.http.post<List>(this.listUrl, {name: name}, this.httpOptions)
+    .pipe(catchError(this.handleError<List>(new List())));
+  }
+
+  remList (id: string): void{
+    this.http.delete(this.listUrl.concat(id)).subscribe()
+    console.log('List ' + id + ' deletet')
+  }
 
   addItem (id: string, name: string): Observable<List> {
     if (id == undefined){return;}

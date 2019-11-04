@@ -15,7 +15,7 @@ export const lightTheme = {
   'text-color': '#2d2d2d',
   'triangle': '#1d1145',
   'lila': '#ed8a63',
-  'list-color': '#ececec'
+  'list-color': '#e9e9e9'
 };
 
 @Injectable({ providedIn: 'root' })

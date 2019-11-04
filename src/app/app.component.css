@@ -42,6 +42,7 @@ nav {
     grid-area: sidebar;
     border-style: none solid none none;
     border-color: var(--triangle);
+    background-color: var(--background-color)
 }
 
 
@@ -53,18 +54,12 @@ nav {
     }
 }
 
-@media only screen and (max-width: 480px){
-  nav{
-    right: 100%;
-    min-width: 12em;
-    z-index: 1;
-  }
-}
-
 /******************* MAIN *******************/
 
 main {
+    min-height: 100vh%;
     grid-area: main;
+    background-color: var(--background-color)
 }
 
 /******************* List *******************/

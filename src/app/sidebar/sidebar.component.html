@@ -10,8 +10,8 @@
             </g>
         </svg>
     </label>
-    <input class='toggle' id='cb1' type='checkbox' [formControl]="darkTheme">
-    <label class='toggle-button' for='cb1'></label>
+    <input class='toggle' id='item' type='checkbox' [formControl]="darkTheme">
+    <label class='toggle-button' for='item'></label>
     <label for='cb1'>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon"
             x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -27,12 +27,11 @@
     <ul>
         <li>Listen
             <ul class="drop-menu menu size">
-                <li><a (click)="copyMessage('5d931253ac8b120017a74aa5')"
-                        value="click to copy">5d931253ac8b120017a74aa5</a>
+              <a *ngFor="let list of allLists">
+                <li><a (click)="copyMessage(list._id)"
+                        value="click to copy">{{list.name}}</a>
                 </li>
-                <li><a (click)="copyMessage('5da07da69cbe830017d47ebb')"
-                        value="click to copy">5da07da69cbe830017d47ebb</a>
-                </li>
+              </a>
             </ul>
         </li>
     </ul>
@@ -41,12 +40,13 @@
 <div id="sidebar">
     <ul>
         <li>
-            <a routerLink="/list-view">Alle Listen</a>
+            <a routerLink="/list-view">Alle Listen
             <span></span><span></span><span></span><span></span>
+            </a>
         </li>
-        <a *ngFor="let item of lists">
+        <a *ngFor="let item of lists" routerLink="/list/{{item.id}}">
             <li>
-                <a routerLink="/list/{{item.id}}">{{item.name}}</a>
+                {{item.name}}
                 <span></span><span></span><span></span><span></span>
             </li>
         </a>

@@ -1,5 +1,5 @@
 export class ListItem {
-  baught: boolean;
+  bought: boolean;
   _id: string;
   name: string;
 }

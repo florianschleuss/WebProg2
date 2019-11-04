@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { ListService } from '../list.service';
 import { SidebarService} from '../sidebar.service';
-
 import { ThemeService } from '../theme.service';
 import { FormControl } from '@angular/forms';
 
@@ -16,10 +16,11 @@ export class SidebarComponent implements OnInit {
 
   @Input()
   lists: any[];
+  allLists: any[];
 
   darkTheme =  new FormControl(false);
 
-  constructor(private sidebarService: SidebarService, private themeService: ThemeService) {
+  constructor(private sidebarService: SidebarService, private themeService: ThemeService, private listService: ListService) {
     this.darkTheme.valueChanges.subscribe(value => {
         if (value) {
           this.themeService.toggleDark();
@@ -30,6 +31,7 @@ export class SidebarComponent implements OnInit {
     };
 
   ngOnInit() {
+        this.listService.getLists().subscribe(lists => this.allLists = lists);
         this.lists = this.sidebarService.getLists();
   };
 

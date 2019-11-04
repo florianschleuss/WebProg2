@@ -28,8 +28,15 @@ export class ListComponent implements OnInit {
   @Input()
   id : string;
   list: List;
+
   ngOnInit() {
     this.getList();
+    //this.route.params.subscribe(params => {
+    //  console.log(params.id)
+  	//	if (params.id != undefined && params.id != this.id){
+    //    location.reload();
+    //  }
+    //});
   };
 
   getList(): void {

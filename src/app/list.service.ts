@@ -48,7 +48,7 @@ export class ListService {
   }
 
   remList (id: string): void{
-    this.http.delete(this.listUrl.concat(id)).subscribe()
+    this.http.delete(this.listUrl.concat(id), this.httpOptions).subscribe()
     console.log('List ' + id + ' deletet')
   }
 

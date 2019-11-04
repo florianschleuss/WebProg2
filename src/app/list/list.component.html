@@ -1,5 +1,5 @@
 <div class="list" *ngIf="list">
-    <h2>{{ list.name }}</h2>
+    <a title="Liste löschen" (click)="delList(list._id)"><h2>{{ list.name }}</h2></a>
     <div class="inputfield">
         <input class="inputeffect" type="text" placeholder="ToDo hinzufügen" #itemName
             (keyup.enter)="addItem(itemName.value); itemName.value = ''" />

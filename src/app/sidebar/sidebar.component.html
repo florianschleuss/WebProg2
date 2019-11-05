@@ -20,18 +20,15 @@
         </svg>
     </label>
 </div>
-
 <div class="middle_line"></div>
-
 <div class="nav">
     <ul>
         <li>Listen
             <ul class="drop-menu menu size">
-              <a *ngFor="let list of allLists">
-                <li><a (click)="copyMessage(list._id)"
-                        value="click to copy">{{list.name}}</a>
-                </li>
-              </a>
+                <a *ngFor="let list of allLists">
+                    <li><a (click)="copyMessage(list._id)" value="click to copy">{{list.name}}</a>
+                    </li>
+                </a>
             </ul>
         </li>
     </ul>
@@ -41,7 +38,7 @@
     <ul>
         <li>
             <a routerLink="/list-view">Alle Listen
-            <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
             </a>
         </li>
         <a *ngFor="let item of lists" routerLink="/list/{{item.id}}">
@@ -52,7 +49,6 @@
         </a>
     </ul>
 </div>
-
 <div class="triangle"></div>
 <a class="github-icon" href="https://github.com/florianschleuss/shopping-list-client">
     <img alt=""

@@ -47,10 +47,10 @@ export class ListService {
             .pipe(catchError(this.handleError<List>(new List())));
     }
 
-    remList(id: string): void {
-        this.http.delete(this.listUrl.concat(id)).subscribe()
-        console.log('List ' + id + ' deletet')
-    }
+  remList (id: string): void{
+    this.http.delete(this.listUrl.concat(id), this.httpOptions).subscribe()
+    console.log('List ' + id + ' deletet')
+  }
 
     addItem(id: string, name: string): Observable<List> {
         if (id == undefined) { return; }

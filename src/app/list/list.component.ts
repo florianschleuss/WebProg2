@@ -47,6 +47,12 @@ export class ListComponent implements OnInit {
       .subscribe(list => this.list = list);
   }
 
+  delList(id: string): void{
+    if (confirm('Wollen Sie die Liste wirklich löschen?')){
+      this.listService.remList(id);
+    };
+  }
+
   addItem(name: string): void {
     name = name.trim();
     if (!name) {console.log('Empty Field'); return; };

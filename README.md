@@ -4,7 +4,7 @@
 1. [Introduction](#introduction)
 2. [Angular](#setting-up-angular)
 3. [Angular Project Structure](#angular-project-structure)
-   3.1. [App Component](#app-component)
+  3.1. [App Component](#app-component)
 
 ## Introduction
 

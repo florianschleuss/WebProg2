@@ -42,7 +42,7 @@ The App Component is the initial page which is loaded by the browser.
 
 
 ### List-View Component
-
+The List-View component is located on the right side of the sidebar and under the header on the page. At the beginning, all newly added lists are displayed there in a clear way. In addition, the input field which is located in the top center of the list view can be used to create or add further lists.
 
 ### List Component
 

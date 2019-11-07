@@ -45,7 +45,6 @@ nav {
     background-color: var(--background-color)
 }
 
-
 @media only screen and (max-width: 480px) {
     nav {
         right: 100%;
@@ -57,16 +56,16 @@ nav {
 /******************* MAIN *******************/
 
 main {
-    min-height: 100vh%;
+    min-height: 100vh;
     grid-area: main;
     background-color: var(--background-color)
 }
 
 /******************* List *******************/
 
-.list{
-  margin: 1em;
-  height: auto;
+.list {
+    margin: 1em;
+    height: auto;
 }
 
 body {
@@ -74,4 +73,4 @@ body {
     border-color: var(--border-color);
     padding: 0;
     margin: 0;
-  }
+}

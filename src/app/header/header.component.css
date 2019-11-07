@@ -203,7 +203,7 @@
     opacity: 1;
 }
 
-.popup1 {
+.popup {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -214,7 +214,7 @@
     transition: all 2s ease-in-out;
 }
 
-.popup1 .close {
+.popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -225,7 +225,7 @@
     color: #333;
 }
 
-.popup1 .content {
+.popup .content {
     max-height: 30%;
     overflow: auto;
     text-align: center;

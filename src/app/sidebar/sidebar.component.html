@@ -20,18 +20,15 @@
         </svg>
     </label>
 </div>
-
 <div class="middle_line"></div>
-
 <div class="nav">
     <ul>
         <li>Listen
             <ul class="drop-menu menu size">
-              <a *ngFor="let list of allLists">
-                <li><a (click)="copyMessage(list._id)"
-                        value="click to copy">{{list.name}}</a>
-                </li>
-              </a>
+                <a *ngFor="let list of allLists">
+                    <li><a (click)="copyMessage(list._id)" value="click to copy">{{list.name}}</a>
+                    </li>
+                </a>
             </ul>
         </li>
     </ul>
@@ -41,7 +38,7 @@
     <ul>
         <li>
             <a routerLink="/list-view">Alle Listen
-            <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
             </a>
         </li>
         <a *ngFor="let item of lists" routerLink="/list/{{item.id}}">
@@ -52,13 +49,12 @@
         </a>
     </ul>
 </div>
-
 <div class="triangle"></div>
 <a class="github-icon" href="https://github.com/florianschleuss/shopping-list-client">
     <img alt=""
         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgaGVpZ2h0PSIzMiIKICAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMiIKICAgdmlld0JveD0iMCAwIDMyIDMyIgogICB3aWR0aD0iMzIiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzYiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImdpdGh1Yi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPjxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyIj48cmRmOlJERj48Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICAgIGlkPSJkZWZzMTAiIC8+PHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTciCiAgICAgaWQ9Im5hbWVkdmlldzgiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjcuMzc1IgogICAgIGlua3NjYXBlOmN4PSIxNiIKICAgICBpbmtzY2FwZTpjeT0iMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzYiIC8+PGcKICAgICBpZD0iZzQiCiAgICAgc3R5bGU9ImZpbGw6I2VkOGE2MztmaWxsLW9wYWNpdHk6MSI+PGcKICAgICAgIGlkPSJHaXRodWJfMV8iCiAgICAgICBzdHlsZT0iZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIj48cGF0aAogICAgICAgICBkPSJNMTYsMEM3LjIsMCwwLDcuMiwwLDE2ICAgICAgIGMwLDguOCw3LjIsMTYsMTYsMTZjOC44LDAsMTYtNy4yLDE2LTE2QzMyLDcuMiwyNC44LDAsMTYsMHogTTIwLDI5LjdjMC0wLjEsMC0wLjIsMC0wLjNjMC0wLjUsMC0yLjMsMC00LjQgICAgICAgYzAtMS41LTAuNS0yLjUtMS4xLTNjMy42LTAuNCw3LjMtMS44LDcuMy03LjljMC0xLjctMC42LTMuMi0xLjYtNC4zYzAuMi0wLjQsMC43LTItMC4yLTQuMmMwLDAtMS4zLTAuNC00LjQsMS42ICAgICAgIGMtMS4zLTAuNC0yLjYtMC41LTQtMC41Yy0xLjQsMC0yLjcsMC4yLTQsMC41QzguOSw1LjIsNy42LDUuNiw3LjYsNS42QzYuNyw3LjgsNy4zLDkuNSw3LjQsOS45Yy0xLDEuMS0xLjYsMi41LTEuNiw0LjMgICAgICAgYzAsNi4xLDMuNyw3LjUsNy4zLDcuOWMtMC41LDAuNC0wLjksMS4xLTEsMi4xYy0wLjksMC40LTMuMiwxLjEtNC43LTEuM2MwLDAtMC44LTEuNS0yLjUtMS42YzAsMC0xLjYsMC0wLjEsMSAgICAgICBjMCwwLDEsMC41LDEuOCwyLjNjMCwwLDAuOSwzLjEsNS40LDIuMWMwLDEuMywwLDIuMywwLDIuN2MwLDAuMSwwLDAuMiwwLDAuMkM2LjIsMjcuOSwyLDIyLjYsMiwxNi4zYzAtNy43LDYuMy0xNCwxNC0xNCAgICAgICBjNy43LDAsMTQsNi4zLDE0LDE0QzMwLDIyLjYsMjUuOCwyNy45LDIwLDI5Ljd6IgogICAgICAgICBpZD0iR2l0aHViIgogICAgICAgICBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIiAvPjwvZz48L2c+PC9zdmc+" />
 </a>
-<a class="angular-icon" href="https://github.com/florianschleuss/shopping-list-client">
+<a class="angular-icon" href="https://angular.io/">
     <img
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAEL0lEQVRYhe2XT2wUZRjGf+9Md6GBCqUFSjDBpRfuaDAmRg8qngwH2mAEArRuwVgToIWK/yYeJKUrNcUDrVBIazRY9MDNgzHxQETl4MXggVYxxsruspSkIN3uPB5mCkt3p6UlHkx4T5P53veZ3/d+3zPfDDyM/3PI8xx5nvMgGjafokwquc4K/haZthosQPrKEf3VHf0//2cA1w/vqfbdfIPQduCpiNpfTAzkJ+30yrdO/P3AACPejoWPLHJekthm2EYgFg6NITvrWGEQwJe7DdNmYEk4nhf62ozBG+P+uYR3+p85AaRTzeudgr8ds1eAmvB2Aexb4Q9OWv7LuvbB8eIa9bQuyN2++YLENmBTMawZ53w0UNPW/40ZmhEg29n0Ica+IukfZc6nC/KFz6sOnUoX52a6dm4AqG0/daH4/mjX7hUVTG4x+VvBnrgrxdGagyf3F+dWlLZEo8JAfCfXbalt67tUrkuBoNsaXt0DUNd+/CrQA/RkUsl15hf6gKcNjU6XKLGQcEYAzLg208PT3clVhhoMNWaObl8dlVfb1nfJIAcgY3hWAN8KwwEIa6NEAZwJvwWIAzHLx1+dKXdKy3FtdgDXj10GwKIB5DXEMbUAN4GbmFrkNcTL5goDEgDKu7MDLOvoGwOuIRaPdu1eUU40t2hJI1CH6QzwBVCXq6xqKJeb7tqxElgEZEPtmQFC7ssAMSbqy89KrwMI9cr84wAyay2X65qTCKtKZh8NoHAjYonpQ9nO5ieBDQYXa9tPXQgt+AOwYcqWxWE44SRK1z8SQOaHG9FKOiBTMFOzj+7cEx8HF25JFyStDdJLHRAJcDfZv6cDgfXYHAoPZo80KXukSWYMAERYMhFCzqEDftAuybnHCUXWi4pSSypwk6z8EpS8CQEqHBsuSBi6AyCvIX4tsF5eFflE7b6BP4tr0t3JVU6+8Bvm71FP62F749htAMzqQbiTk/ffgSVrxq4AeWD1iLdjIdy1nuDM9IcDLN/b95ewIbAVuVvjmyE4TUGrgPzS+vE/7hvAGocKgiuAU7U4/hiAFG4+caxcDYAcusNZ7wWoqqxIAI4Zv1vjUKFcTdklADAYBupNky8Cl2oOnCyx2PRY3nbiIkUnrDn+RmRIjETVRAMYv0o8j6w7c6R5k+S3LT/Y/9NsEADpzl2PmzkppGeCyVjkoRb5RaTeZCw35u8Ueh9YCQg46xbUsfTN/rIbKtvZ/CjmvwPWTLC8WRNd1bdudJs3NDEngKm46r222K2caMM4AKoEJpCOO3H/veq9p6/PlGOqeLfc+39OAFORSzWtKfh8YPByWJcR5gUi8oBagsPvM8d3Di3r6LtyP7pz/ixPp5rXu75SgmenDX2P7+yv6fjk/Fz05vVfAJDp2vWcyboRcYy3aw6cHJqv1rxDvcmYepOx2TMfRnT8C+thukjWWSuZAAAAAElFTkSuQmCC"></a>
 <p class="github-icon rights">

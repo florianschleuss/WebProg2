@@ -1,383 +1,359 @@
 :host {
-  color: var(--text-color);
+    color: var(--text-color);
+
 }
 
 /******************* Triangle and Logo from Sidebar *******************/
 
 .triangle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 12em 12em;
-  border-color: transparent transparent var(--triangle) transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 12em 12em;
+    border-color: transparent transparent var(--triangle) transparent;
 }
 
 .github-icon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0.5em;
-  margin: 0.6em 0;
-  float: left;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em;
+    margin: 0.6em 0;
+    float: left;
 }
 
 .angular-icon {
-  position: absolute;
-  right: 40px;
-  bottom: 0;
-  padding: 0.5em;
-  margin: 0.6em 0;
-  float: left;
-  color: var(--triangle);
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    padding: 0.5em;
+    margin: 0.6em 0;
+    float: left;
+    color: var(--triangle);
 }
 
 .rights {
-  margin: 0;
-  color: var(--lila);
+    margin: 0;
+    color: var(--lila);
 }
 
 p {
-  margin: 0;
-  font-size: 10px;
-  color: #ed8a63;
+    margin: 0;
+    font-size: 10px;
+    color: #ed8a63;
 }
 
 .logo {
-  bottom: 0;
-  right: auto;
-  width: auto;
-  height: 0;
+    bottom: 0;
+    right: auto;
+    width: auto;
+    height: 0;
 }
 
 /******************* Sidebar with Hovereffects *******************/
 
 #sidebar ul {
-  list-style-type: none;
-  margin: 2em 1em;
-  padding: 10px;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
+    list-style-type: none;
+    margin: 2em 1em;
+    padding: 10px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
 }
 
 #sidebar a {
-  text-decoration: none;
-  color: var(--triangle);
+    text-decoration: none;
+    color: var(--triangle);
 }
 
 #sidebar a:hover {
-  text-decoration: none;
-  color: var(--lila);
+    text-decoration: none;
+    color: var(--lila);
 }
 
 #sidebar:active {
-  color: var(--lila);
+    color: var(--lila);
 }
 
 #sidebar ul li {
-  border-color: var(--triangle);
-  font-size: 12px;
-  border: 0.3em solid var(--triangle);
-  border-radius: 0.9em;
-  width: auto;
-  height: 3em;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  text-align: center;
-  line-height: 3em;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: 0.1s;
-  margin: 1em;
+    border-color: var(--triangle);
+    font-size: 12px;
+    border: 0.3em solid var(--triangle);
+    border-radius: 0.9em;
+    width: auto;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.1s;
+    margin: 1em;
 }
 
 #sidebar ul {
-  padding: 0;
+    padding: 0;
 }
 
 #sidebar ul li span {
-  position: absolute;
-  width: 65%;
-  height: 100%;
-  background-color: var(--triangle);
-  transform: translateY(100%);
-  border-radius: 50%;
-  left: calc((var(--n) - 1) * 15%);
-  transition: 0.5s;
-  transition-delay: calc((var(--n) - 1) * 0.1s);
-  z-index: -1;
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    background-color: var(--triangle);
+    transform: translateY(100%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 15%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
 }
 
 #sidebar ul li:hover {
-  color: var(--lila);
-  cursor: pointer;
+    color: var(--lila);
+    cursor: pointer;
 }
 
 #sidebar ul li:hover span {
-  transform: translateY(0) scale(2);
+    transform: translateY(0) scale(2);
 }
 
 #sidebar ul li span:nth-child(1) {
-  --n: 1;
+    --n: 1;
 }
 
 #sidebar ul li span:nth-child(2) {
-  --n: 2;
+    --n: 2;
 }
 
 #sidebar ul li span:nth-child(3) {
-  --n: 3;
+    --n: 3;
 }
 
 #sidebar ul li span:nth-child(4) {
-  --n: 4;
+    --n: 4;
 }
 
 /******************* Dropdown menu *******************/
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 .size {
-  font-size: 70%;
-  cursor: copy;
+    font-size: 70%;
+    cursor: copy;
 }
 
 .nav li:hover {
-  background: var(--triangle);
+    background: var(--triangle);
 }
 
-.nav > ul {
-  list-style: none;
-  margin: 2em 1em;
-  padding: 10px;
-  color: rgba(255, 255, 255, 0.7);
+.nav>ul {
+    list-style: none;
+    margin: 2em 1em;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.nav > ul > li {
-  width: auto;
-  height: 3em;
-  line-height: 3em;
-  position: relative;
-  cursor: pointer;
-  color: #ed8a63;
-  font-size: 12px;
-  border: 0.3em solid var(--triangle);
-  border-radius: 0.9em;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  text-align: center;
+.nav>ul>li {
+    width: auto;
+    height: 3em;
+    line-height: 3em;
+    position: relative;
+    cursor: pointer;
+    color: #ed8a63;
+    font-size: 12px;
+    border: 0.3em solid var(--triangle);
+    border-radius: 0.9em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
 
-.nav > ul > li:hover {
-  color: var(--lila);
+.nav>ul>li:hover {
+    color: var(--lila);
 }
 
 ul.drop-menu {
-  font-size: 0.8em;
-  z-index: 2;
-  position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 100%;
-  padding: 0;
+    font-size: 0.8em;
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    padding: 0;
 }
 
 ul.drop-menu li {
-  background: #ececec;
-  border: 0.3em solid var(--triangle);
-  background-color: var(--background-color)
+    background: #ececec;
+    border: 0.3em solid var(--triangle);
+    background-color: var(--background-color)
 }
 
 ul.drop-menu li:hover {
-  background: #f5e1e1;
+    background: #f5e1e1;
 }
 
 ul.drop-menu li {
-  border-radius: 0.9em;
+    border-radius: 0.9em;
 }
 
 ul.drop-menu li {
-  display: none;
+    display: none;
 }
 
-li:hover > ul.drop-menu li {
-  display: block;
+li:hover>ul.drop-menu li {
+    display: block;
 }
 
-li:hover > ul.drop-menu.menu li:nth-child(1) {
-  animation-name: menu;
-  animation-duration: 300ms;
-  animation-delay: -150ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  line-height: 3em;
-  color: #ed8a63;
+li:hover>ul.drop-menu.menu li:nth-child(1) {
+    animation-name: menu;
+    animation-duration: 300ms;
+    animation-delay: -150ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    line-height: 3em;
+    color: #ed8a63;
 }
 
 @keyframes menu {
-  0% {
-    opacity: 0;
-    transform: rotateY(90deg);
-  }
-  70% {
-    transform: rotateY(-10deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateY(0deg);
-  }
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    70% {
+        transform: rotateY(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
 }
 
 .middle_line {
-  height: 2px;
-  width: auto;
-  margin: 0 20px;
-  background-color: var(--triangle);
+    height: 2px;
+    width: auto;
+    margin: 0 20px;
+    background-color: var(--triangle);
 }
 
 .tgl {
-  position: relative;
-  text-align: center;
-  display: inline-block;
-  cursor: pointer;
-  user-select: none;
-  margin: 0 20%;
-  margin-bottom: 20px;
-  padding: 1em 1em 0 1em;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 20%;
+    margin-bottom: 20px;
+    padding: 1em 1em 0 1em;
 }
 
-
-
-
-
-
 .button-con {
-  cursor: default;
-  position: relative;
-  margin-left: -76px;
-  margin-top: -18px;
-  margin: 1.2em 0;
-  left: 20%;
+    cursor: default;
+    position: relative;
+    margin-left: -76px;
+    margin-top: -18px;
+    margin: 1.2em 0;
+    left: 20%;
 }
 
 #dayIcon {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  top: -3px;
-  margin: 0 7px;
-  fill: var(--triangle);
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: -3px;
+    margin: 0 7px;
+    fill: var(--triangle);
 }
 
 #nightIcon {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  top: -3px;
-  margin: 0 7px;
-  fill: var(--triangle);
+    position: relative;
+    width: 26px;
+    height: 26px;
+    top: -3px;
+    margin: 0 7px;
+    fill: var(--triangle);
 }
 
-#dayIcon,
-#nightIcon {
-  cursor: pointer;
+#dayIcon, #nightIcon {
+    cursor: pointer;
 }
 
 .toggle {
-  display: none;
+    display: none;
 }
 
-.toggle,
-.toggle:after,
-.toggle:before,
-.toggle *,
-.toggle *:after,
-.toggle *:before,
-.toggle + .toggle-button {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.toggle, .toggle:after, .toggle:before, .toggle *, .toggle *:after, .toggle *:before, .toggle+.toggle-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.toggle::-moz-selection,
-.toggle:after::-moz-selection,
-.toggle:before::-moz-selection,
-.toggle *::-moz-selection,
-.toggle *:after::-moz-selection,
-.toggle *:before::-moz-selection,
-.toggle + .toggle-button::-moz-selection {
-  background: none;
+.toggle::-moz-selection, .toggle:after::-moz-selection, .toggle:before::-moz-selection, .toggle *::-moz-selection, .toggle *:after::-moz-selection, .toggle *:before::-moz-selection, .toggle+.toggle-button::-moz-selection {
+    background: none;
 }
 
-.toggle::selection,
-.toggle:after::selection,
-.toggle:before::selection,
-.toggle *::selection,
-.toggle *:after::selection,
-.toggle *:before::selection,
-.toggle + .toggle-button::selection {
-  background: none;
+.toggle::selection, .toggle:after::selection, .toggle:before::selection, .toggle *::selection, .toggle *:after::selection, .toggle *:before::selection, .toggle+.toggle-button::selection {
+    background: none;
 }
 
-.toggle + .toggle-button {
-  outline: 0;
-  display: inline-block;
-  width: 4em;
-  height: 2em;
-  position: relative;
-  cursor: pointer;
-  border: 2px solid var(--triangle);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.toggle+.toggle-button {
+    outline: 0;
+    display: inline-block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid var(--triangle);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.toggle + .toggle-button:after,
-.toggle + .toggle-button:before {
-  position: relative;
-  display: block;
-  content: "";
-  width: 50%;
-  height: 100%;
+.toggle+.toggle-button:after, .toggle+.toggle-button:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
 }
 
-.toggle + .toggle-button:after {
-  left: 0;
+.toggle+.toggle-button:after {
+    left: 0;
 }
 
-.toggle + .toggle-button:before {
-  display: none;
+.toggle+.toggle-button:before {
+    display: none;
 }
 
-.toggle:checked + .toggle-button:after {
-  left: 50%;
+.toggle:checked+.toggle-button:after {
+    left: 50%;
 }
 
-.toggle + .toggle-button {
-  padding: 2px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border: 2px solid var(--triangle);
-  border-radius: 2em;
+.toggle+.toggle-button {
+    padding: 2px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border: 2px solid var(--triangle);
+    border-radius: 2em;
 }
 
-.toggle + .toggle-button:after {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  background: var(--triangle);
-  content: "";
-  border-radius: 1em;
+.toggle+.toggle-button:after {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    background: var(--triangle);
+    content: "";
+    border-radius: 1em;
 }
 
-.toggle:checked + .toggle-button:after {
-  left: 50%;
+.toggle:checked+.toggle-button:after {
+    left: 50%;
 }

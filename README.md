@@ -4,7 +4,16 @@
 1. [Introduction](#introduction)
 2. [Angular](#setting-up-angular)
 3. [Angular Project Structure](#angular-project-structure)
-  3.1. [App Component](#app-component)
+   1. [App Component](#app-component)
+   2. [Header Component](#header-component)
+   3. [Sidebar Component](#sidebar-component)
+   4. [List-View Component](#list-view-component)
+   5. [List Component](#list-component)
+   6. [List Service](#list-service)
+   7. [Sidebar Service](#sidebar-service)
+   8. [Theme Service](#theme-service)
+   9. [Component Routing](#component-routing)
+
 
 ## Introduction
 

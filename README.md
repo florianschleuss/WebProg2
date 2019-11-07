@@ -4,6 +4,7 @@
 1. [Introduction](#introduction)
 2. [Angular](#setting-up-angular)
 3. [Angular Project Structure](#angular-project-structure)
+   1. [App Component](#app-component)
 
 ## Introduction
 
@@ -23,7 +24,7 @@ This project is created with five components. Including the main App-Component.
 Additionally there are three services to make special functions available to all components.
 
 ### App Component
-
+The App Component is the initial page which is loaded by the browser.
 
 ### Header Component
 

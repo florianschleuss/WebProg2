@@ -1,31 +1,65 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SidebarComponent } from '../sidebar/sidebar.component'
+import { SidebarService } from '../sidebar.service';
+import { ListService } from '../list.service';
+import { ThemeService } from '../theme.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-list-view',
-  templateUrl: './list-view.component.html',
-  styleUrls: ['./list-view.component.css']
+    selector: 'app-list-view',
+    templateUrl: './list-view.component.html',
+    styleUrls: ['./list-view.component.css']
 })
 export class ListViewComponent implements OnInit {
 
-  title = 'ToDo Listen';
-  lists: string[];
+    title = 'ToDo Listen';
+    lists: string[] = [];
 
-  constructor(private sidebarComponent: SidebarComponent) { };
+    darkTheme = new FormControl(false);
 
-  ngOnInit() {
-    this.lists =['5d931253ac8b120017a74aa5'];                                       //initialize empty list to store list which should be shown
-  }
+    constructor(private sidebarService: SidebarService, private themeService: ThemeService, private listService: ListService) {
+        this.darkTheme.valueChanges.subscribe(value => {
+            if (value) {
+                this.themeService.toggleDark();
+            } else {
+                this.themeService.toggleLight();
+            }
+        });
+    };
 
-  addList (id: string): void{
-    id = id.trim();
-    if (this.lists.indexOf(id) === -1 && id != "") {      //add list id to lists array only if not present in there
-      this.lists.push(id);
-      this.sidebarComponent.addToNav(id);
+    ngOnInit() {
+
+        this.listService.getLists();
+
+        if (this.lists = []) {
+            for (var id of this.sidebarService.getIdLists()) {
+                this.addList(id);
+            }
+        }
     }
-    else {                                                //else print to console
-      console.log("This item already exists or is empty");
-    }
-  };
+
+    addList(inp: string): void {
+        inp = inp.trim();
+
+        if (inp.length == 24) {
+            var id = inp;
+            if (this.lists.indexOf(id) === -1 && id != "") {
+                this.lists.push(id);
+                this.sidebarService.addList(id);
+            }
+            else {
+                console.log("This item already exists in List-View or is empty");
+            }
+        }
+        else if (inp.length != 0) {
+            console.log(inp)
+            this.listService.addList(inp).subscribe(list => this.addList(list._id));
+        }
+
+    };
 }
+
+//Funktion zum automatischen Einfügen aus dem Clipboard
+  //async function paste(input) {
+  //  const text = await navigator.clipboard.readText();
+  //  input.value = text;

@@ -1,30 +1,62 @@
-<div id="sidebar">
+<div class="button-con">
+    <label for='cb1'>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon"
+            x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
+            <g id="Sun">
+                <g>
+                    <path style="fill-rule:evenodd;clip-rule:evenodd;"
+                        d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+                </g>
+            </g>
+        </svg>
+    </label>
+    <input class='toggle' id='item' type='checkbox' [formControl]="darkTheme">
+    <label class='toggle-button' for='item'></label>
+    <label for='cb1'>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon"
+            x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+            <path
+                d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+        </svg>
+    </label>
+</div>
+<div class="middle_line"></div>
+<div class="nav">
     <ul>
-        <li class="abstand">
-            Alle Listen
-            <span></span><span></span><span></span><span></span>
-        </li>
-        <li>
-            Liste 1
-            <span></span><span></span><span></span><span></span>
-        </li>
-        <li>
-            Liste 2
-            <span></span><span></span><span></span><span></span>
+        <li>Listen
+            <ul class="drop-menu menu size">
+                <a *ngFor="let list of allLists">
+                    <li><a (click)="copyMessage(list._id)" value="click to copy">{{list.name}}</a>
+                    </li>
+                </a>
+            </ul>
         </li>
     </ul>
 </div>
-
+<div class="middle_line"></div>
+<div id="sidebar">
+    <ul>
+        <li>
+            <a routerLink="/list-view">Alle Listen
+                <span></span><span></span><span></span><span></span>
+            </a>
+        </li>
+        <a *ngFor="let item of lists" routerLink="/list/{{item.id}}">
+            <li>
+                {{item.name}}
+                <span></span><span></span><span></span><span></span>
+            </li>
+        </a>
+    </ul>
+</div>
 <div class="triangle"></div>
-
-
-
-    <a class="github-icon" href="https://github.com/florianschleuss/shopping-list-client">
-            <img alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgaGVpZ2h0PSIzMiIKICAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMiIKICAgdmlld0JveD0iMCAwIDMyIDMyIgogICB3aWR0aD0iMzIiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzYiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImdpdGh1Yi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPjxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyIj48cmRmOlJERj48Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICAgIGlkPSJkZWZzMTAiIC8+PHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTciCiAgICAgaWQ9Im5hbWVkdmlldzgiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjcuMzc1IgogICAgIGlua3NjYXBlOmN4PSIxNiIKICAgICBpbmtzY2FwZTpjeT0iMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzYiIC8+PGcKICAgICBpZD0iZzQiCiAgICAgc3R5bGU9ImZpbGw6I2VkOGE2MztmaWxsLW9wYWNpdHk6MSI+PGcKICAgICAgIGlkPSJHaXRodWJfMV8iCiAgICAgICBzdHlsZT0iZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIj48cGF0aAogICAgICAgICBkPSJNMTYsMEM3LjIsMCwwLDcuMiwwLDE2ICAgICAgIGMwLDguOCw3LjIsMTYsMTYsMTZjOC44LDAsMTYtNy4yLDE2LTE2QzMyLDcuMiwyNC44LDAsMTYsMHogTTIwLDI5LjdjMC0wLjEsMC0wLjIsMC0wLjNjMC0wLjUsMC0yLjMsMC00LjQgICAgICAgYzAtMS41LTAuNS0yLjUtMS4xLTNjMy42LTAuNCw3LjMtMS44LDcuMy03LjljMC0xLjctMC42LTMuMi0xLjYtNC4zYzAuMi0wLjQsMC43LTItMC4yLTQuMmMwLDAtMS4zLTAuNC00LjQsMS42ICAgICAgIGMtMS4zLTAuNC0yLjYtMC41LTQtMC41Yy0xLjQsMC0yLjcsMC4yLTQsMC41QzguOSw1LjIsNy42LDUuNiw3LjYsNS42QzYuNyw3LjgsNy4zLDkuNSw3LjQsOS45Yy0xLDEuMS0xLjYsMi41LTEuNiw0LjMgICAgICAgYzAsNi4xLDMuNyw3LjUsNy4zLDcuOWMtMC41LDAuNC0wLjksMS4xLTEsMi4xYy0wLjksMC40LTMuMiwxLjEtNC43LTEuM2MwLDAtMC44LTEuNS0yLjUtMS42YzAsMC0xLjYsMC0wLjEsMSAgICAgICBjMCwwLDEsMC41LDEuOCwyLjNjMCwwLDAuOSwzLjEsNS40LDIuMWMwLDEuMywwLDIuMywwLDIuN2MwLDAuMSwwLDAuMiwwLDAuMkM2LjIsMjcuOSwyLDIyLjYsMiwxNi4zYzAtNy43LDYuMy0xNCwxNC0xNCAgICAgICBjNy43LDAsMTQsNi4zLDE0LDE0QzMwLDIyLjYsMjUuOCwyNy45LDIwLDI5Ljd6IgogICAgICAgICBpZD0iR2l0aHViIgogICAgICAgICBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIiAvPjwvZz48L2c+PC9zdmc+" />
-    </a>
-    <p class="github-icon rights">
-             © 2019 SchSch. All rights reserved.
-    </p>
-
-
-
+<a class="github-icon" href="https://github.com/florianschleuss/shopping-list-client">
+    <img alt=""
+        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgaGVpZ2h0PSIzMiIKICAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMiIKICAgdmlld0JveD0iMCAwIDMyIDMyIgogICB3aWR0aD0iMzIiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzYiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImdpdGh1Yi5zdmciCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuNCAoNWRhNjg5YzMxMywgMjAxOS0wMS0xNCkiPjxtZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTEyIj48cmRmOlJERj48Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICAgIGlkPSJkZWZzMTAiIC8+PHNvZGlwb2RpOm5hbWVkdmlldwogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTciCiAgICAgaWQ9Im5hbWVkdmlldzgiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnpvb209IjcuMzc1IgogICAgIGlua3NjYXBlOmN4PSIxNiIKICAgICBpbmtzY2FwZTpjeT0iMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIzMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIxIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzYiIC8+PGcKICAgICBpZD0iZzQiCiAgICAgc3R5bGU9ImZpbGw6I2VkOGE2MztmaWxsLW9wYWNpdHk6MSI+PGcKICAgICAgIGlkPSJHaXRodWJfMV8iCiAgICAgICBzdHlsZT0iZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIj48cGF0aAogICAgICAgICBkPSJNMTYsMEM3LjIsMCwwLDcuMiwwLDE2ICAgICAgIGMwLDguOCw3LjIsMTYsMTYsMTZjOC44LDAsMTYtNy4yLDE2LTE2QzMyLDcuMiwyNC44LDAsMTYsMHogTTIwLDI5LjdjMC0wLjEsMC0wLjIsMC0wLjNjMC0wLjUsMC0yLjMsMC00LjQgICAgICAgYzAtMS41LTAuNS0yLjUtMS4xLTNjMy42LTAuNCw3LjMtMS44LDcuMy03LjljMC0xLjctMC42LTMuMi0xLjYtNC4zYzAuMi0wLjQsMC43LTItMC4yLTQuMmMwLDAtMS4zLTAuNC00LjQsMS42ICAgICAgIGMtMS4zLTAuNC0yLjYtMC41LTQtMC41Yy0xLjQsMC0yLjcsMC4yLTQsMC41QzguOSw1LjIsNy42LDUuNiw3LjYsNS42QzYuNyw3LjgsNy4zLDkuNSw3LjQsOS45Yy0xLDEuMS0xLjYsMi41LTEuNiw0LjMgICAgICAgYzAsNi4xLDMuNyw3LjUsNy4zLDcuOWMtMC41LDAuNC0wLjksMS4xLTEsMi4xYy0wLjksMC40LTMuMiwxLjEtNC43LTEuM2MwLDAtMC44LTEuNS0yLjUtMS42YzAsMC0xLjYsMC0wLjEsMSAgICAgICBjMCwwLDEsMC41LDEuOCwyLjNjMCwwLDAuOSwzLjEsNS40LDIuMWMwLDEuMywwLDIuMywwLDIuN2MwLDAuMSwwLDAuMiwwLDAuMkM2LjIsMjcuOSwyLDIyLjYsMiwxNi4zYzAtNy43LDYuMy0xNCwxNC0xNCAgICAgICBjNy43LDAsMTQsNi4zLDE0LDE0QzMwLDIyLjYsMjUuOCwyNy45LDIwLDI5Ljd6IgogICAgICAgICBpZD0iR2l0aHViIgogICAgICAgICBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZWQ4YTYzO2ZpbGwtb3BhY2l0eToxIiAvPjwvZz48L2c+PC9zdmc+" />
+</a>
+<a class="angular-icon" href="https://angular.io/">
+    <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAEL0lEQVRYhe2XT2wUZRjGf+9Md6GBCqUFSjDBpRfuaDAmRg8qngwH2mAEArRuwVgToIWK/yYeJKUrNcUDrVBIazRY9MDNgzHxQETl4MXggVYxxsruspSkIN3uPB5mCkt3p6UlHkx4T5P53veZ3/d+3zPfDDyM/3PI8xx5nvMgGjafokwquc4K/haZthosQPrKEf3VHf0//2cA1w/vqfbdfIPQduCpiNpfTAzkJ+30yrdO/P3AACPejoWPLHJekthm2EYgFg6NITvrWGEQwJe7DdNmYEk4nhf62ozBG+P+uYR3+p85AaRTzeudgr8ds1eAmvB2Aexb4Q9OWv7LuvbB8eIa9bQuyN2++YLENmBTMawZ53w0UNPW/40ZmhEg29n0Ica+IukfZc6nC/KFz6sOnUoX52a6dm4AqG0/daH4/mjX7hUVTG4x+VvBnrgrxdGagyf3F+dWlLZEo8JAfCfXbalt67tUrkuBoNsaXt0DUNd+/CrQA/RkUsl15hf6gKcNjU6XKLGQcEYAzLg208PT3clVhhoMNWaObl8dlVfb1nfJIAcgY3hWAN8KwwEIa6NEAZwJvwWIAzHLx1+dKXdKy3FtdgDXj10GwKIB5DXEMbUAN4GbmFrkNcTL5goDEgDKu7MDLOvoGwOuIRaPdu1eUU40t2hJI1CH6QzwBVCXq6xqKJeb7tqxElgEZEPtmQFC7ssAMSbqy89KrwMI9cr84wAyay2X65qTCKtKZh8NoHAjYonpQ9nO5ieBDQYXa9tPXQgt+AOwYcqWxWE44SRK1z8SQOaHG9FKOiBTMFOzj+7cEx8HF25JFyStDdJLHRAJcDfZv6cDgfXYHAoPZo80KXukSWYMAERYMhFCzqEDftAuybnHCUXWi4pSSypwk6z8EpS8CQEqHBsuSBi6AyCvIX4tsF5eFflE7b6BP4tr0t3JVU6+8Bvm71FP62F749htAMzqQbiTk/ffgSVrxq4AeWD1iLdjIdy1nuDM9IcDLN/b95ewIbAVuVvjmyE4TUGrgPzS+vE/7hvAGocKgiuAU7U4/hiAFG4+caxcDYAcusNZ7wWoqqxIAI4Zv1vjUKFcTdklADAYBupNky8Cl2oOnCyx2PRY3nbiIkUnrDn+RmRIjETVRAMYv0o8j6w7c6R5k+S3LT/Y/9NsEADpzl2PmzkppGeCyVjkoRb5RaTeZCw35u8Ueh9YCQg46xbUsfTN/rIbKtvZ/CjmvwPWTLC8WRNd1bdudJs3NDEngKm46r222K2caMM4AKoEJpCOO3H/veq9p6/PlGOqeLfc+39OAFORSzWtKfh8YPByWJcR5gUi8oBagsPvM8d3Di3r6LtyP7pz/ixPp5rXu75SgmenDX2P7+yv6fjk/Fz05vVfAJDp2vWcyboRcYy3aw6cHJqv1rxDvcmYepOx2TMfRnT8C+thukjWWSuZAAAAAElFTkSuQmCC"></a>
+<p class="github-icon rights">
+    © 2019 SchSch. All rights reserved.
+</p>

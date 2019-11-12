@@ -1,32 +1,41 @@
 .list {
-    background-color: #ffffff;
+    background-color: var(--list-color);
     border-style: solid;
-    border-color: #3a4660;
+    border-color: var(--triangle);
+    color: var(--text-color);
     margin: 2em;
     padding: 2em;
     border-radius: 1em;
     min-width: 15em;
+    box-shadow: 0 1px 3px #000000, 0 1px 2px #000000;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-h2 {
-    margin: 0 0 1em 0;
-    text-align: center;
-}
-
-.card-1 {
-    box-shadow: 0 1px 3px #3a4660, 0 1px 2px #3a4660;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
-
-.card-1:hover {
+.list:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/******************* Inputfield list-view *******************/
-
-.size {
-    font-size: xx-small;
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
 }
+
+a:hover {
+    color: #ed8a63;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+a:hover{
+  color: #ed8a63;
+}
+
+/******************* Inputfield list-view *******************/
 
 .inputfield {
     text-align: center;
@@ -35,11 +44,12 @@ h2 {
     position: relative;
     left: 45%;
     transform: translateX(-50%);
+    margin: 0;
 }
 
 input[type="text"] {
     font: 15px/24px "Lato", Arial, sans-serif;
-    color: #333;
+    font-family: DPDorkDiary;
     width: 100%;
     box-sizing: border-box;
     letter-spacing: 1px;
@@ -51,7 +61,7 @@ input[type="text"] {
 .inputeffect {
     border: 0;
     padding: 7px 0;
-    border-bottom: 1px solid #3a4660;
+    border-bottom: 1px solid #1d1145;
 }
 
 textarea:focus, input:focus {
@@ -90,27 +100,7 @@ textarea:focus, input:focus {
 
 /******************* Button list-view *******************/
 
-@keyframes pulse {
-    0% {
-      transform: scale(0);
-      opacity: 0;
-    }
-    33% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(2);
-      opacity: 0;
-    }
-  }
-
-  i {
-      font-weight: bold;
-      font-size: 30px;
-  }
-
-  .button {
+.button {
     display: inline-flex;
     align-items: center;
     background: white;
@@ -118,55 +108,150 @@ textarea:focus, input:focus {
     border-radius: 90px;
     height: 40px;
     padding: 0 20px;
-    color: #3a4660;
+    color: #1d1145;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background .3s, transform .3s, box-shadow .3s;
+    transition: 0.3s, transform 0.3s, box-shadow 0.3s;
     will-change: transform;
-  }
-  .button:hover {
+}
+
+.button:hover {
     background: white;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.2);
     transform: translate3d(0, -2px, 0);
     cursor: pointer;
-  }
+}
 
-  .button:active {
+.button:active {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     transform: translate3d(0, 1px, 0);
-  }
-
-  .pulse {
-    position: relative;
-  }
-
-  .pulse:before, .pulse:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    opacity: 0;
-    margin: auto;
-  }
-  .pulse:before {
-    animation: pulse 1.5s infinite linear;
-  }
-  .pulse:after {
-    animation: pulse 2s .4s infinite linear;
-  }
-  .pulse:hover:before, .pulse:hover:after {
-    display: none;
-  }
-
+}
 
 .inputbutton {
     position: absolute;
     cursor: pointer;
 }
 
+.button {
+    display: inline-flex;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    padding: 0 0px;
+    height: 35px;
+}
+
+.button:hover {
+    background-color: #ed8a63;
+    box-shadow: 0px 15px 20px ed8a63;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.addButtonIcon {
+    width: 35px;
+    height: 35px;
+}
+
+/******************* Todo-list style *******************/
+
+.todo_list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo_element {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.todo_element label {
+    font-family: DPDorkDiary;
+    font-size: 1em;
+}
+
+.todo_list span:last-child .todo_element {
+    border-bottom: none;
+}
+
+.buttonsize {
+    float: right;
+}
+
+.check:hover {
+    box-shadow: 0px 15px 20px ed8a63;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+h2 {
+    font-family: DPDorkDiary;
+    float: left;
+    font-size: 30px;
+}
+
+/******************* Checkbox *******************/
+
+input[type="checkbox"]+label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label:before {
+    content: "\2714";
+    border: 0.1em solid var(--text-color);
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]+label:active:before {
+    transform: scale(0);
+}
+
+input[type="checkbox"]:checked+label:after {
+    color: red;
+}
+
+input[type="checkbox"]:checked+label:before {
+    background-color: #ed8a63;
+    border-color: #ed8a63;
+    color: #fff;
+}
+
+input[type="checkbox"]:disabled+label:before {
+    transform: scale(1);
+    border-color: #1d1145;
+}
+
+input[type="checkbox"]:checked:disabled+label:before {
+    transform: scale(1);
+    background-color: #ed8a63;
+    border-color: #1d1145;
+}
+
+input[type="checkbox"]:checked+label {
+    color: var(--triangle);
+    text-decoration: line-through;
+}

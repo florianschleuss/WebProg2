@@ -3,6 +3,9 @@ Blue:         #3a4660
 Beige:        #c9af98
 Font:         #ed8a63
 Logo Color:   #845007
+
+Lila:         #1d1145
+
 **/
 
 body {
@@ -10,45 +13,64 @@ body {
     display: grid;
     grid-template-columns: minmax(12em, 15em) minmax(70%, auto);
     grid-template-rows: 4em auto;
-    grid-template-areas:
-      "header header"
-      "sidebar main";
+    grid-template-areas: "header header" "sidebar main";
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        grid-template-columns: 0em auto;
+    }
 }
 
 /******************* HEADER *******************/
 
 /*Integrated fixed Header*/
+
 header {
-  grid-area: header;
-  z-index: 1;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0;
+    grid-area: header;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0;
 }
 
 /******************* SIDEBAR *******************/
 
 nav {
-    background-color: #c9af98;
     position: relative;
     grid-area: sidebar;
     border-style: none solid none none;
-    border-color: #3a4660;
-    box-shadow: -2em 0em 3em 1em #3a4660;
+    border-color: var(--triangle);
+    background-color: var(--background-color)
+}
+
+@media only screen and (max-width: 480px) {
+    nav {
+        right: 100%;
+        min-width: 12em;
+        z-index: 1;
+    }
 }
 
 /******************* MAIN *******************/
 
 main {
+    min-height: 100vh;
     grid-area: main;
-    background-color: #c9af98;
-    color: #3a4660;
+    background-color: var(--background-color)
 }
 
 /******************* List *******************/
 
-.list{
-  margin: 1em;
-  height: auto;
+.list {
+    margin: 1em;
+    height: auto;
+}
+
+body {
+    background-color: var(--background-color);
+    border-color: var(--border-color);
+    padding: 0;
+    margin: 0;
 }

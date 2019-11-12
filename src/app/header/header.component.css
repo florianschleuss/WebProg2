@@ -1,9 +1,9 @@
 .styling {
-    background-color: #3a4660;
+    background-color: var(--triangle);
 }
 
 .sty {
-    color: #ed8a63;
+    color: var(--lila);
     position: absolute;
     left: 10%;
     bottom: 0;
@@ -11,9 +11,10 @@
     margin: -0.39em 1em;
     padding: 0;
 }
-/******************* Hamburger Menu *******************/
 
-.check-box{
+/******************* Hamburger Menu Header *******************/
+
+.check-box {
     width: 4em;
 }
 
@@ -24,7 +25,7 @@
 .line {
     fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-    stroke: #c9af98;
+    stroke: var(--lila);
     stroke-width: 5.5;
     stroke-linecap: round;
 }
@@ -55,14 +56,14 @@
     stroke-dashoffset: -86px;
 }
 
-/******************* Links icon *******************/
+/******************* Links icon Header *******************/
 
 *, *:before, *:after {
     box-sizing: border-box;
     outline: none;
-  }
+}
 
-  .size {
+.size {
     position: relative;
     right: 0;
     left: 0;
@@ -70,19 +71,21 @@
     padding: 0;
     float: right;
     margin: 0.7em;
-  }
+}
 
-  .hover {
+.hover {
     display: flex;
     align-items: center;
-    width: 10%;
+    min-width: 8em;
+    max-width: 10%;
     height: 40px;
-    background-color: #46627f;
+    background-color: #1d1145;
     border-radius: 99px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     overflow: hidden;
-  }
-  .hover:before, .hover:after {
+}
+
+.hover:before, .hover:after {
     position: absolute;
     top: 0;
     display: flex;
@@ -91,36 +94,43 @@
     height: 100%;
     transition: 0.25s linear;
     z-index: 1;
-  }
-  .hover:before {
-    content: '';
+}
+
+.hover:before {
+    content: "";
     left: 0;
     justify-content: flex-end;
-    background-color: #ed8a63;
-  }
-  .hover:after {
-    content: '';
+    background-color: var(--lila);
+}
+
+.hover:after {
+    content: "";
     right: 0;
     justify-content: flex-start;
-    background-color: #ed8a63;
-  }
-  .hover:hover {
-    background-color: #46627f;
+    background-color: var(--lila);
+}
+
+.hover:hover {
+    background-color: #1d1145;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  }
-  .hover:hover span {
+}
+
+.hover:hover span {
     opacity: 0;
     z-index: -3;
-  }
-  .hover:hover:before {
+}
+
+.hover:hover:before {
     opacity: 0.5;
     transform: translateY(-100%);
-  }
-  .hover:hover:after {
+}
+
+.hover:hover:after {
     opacity: 0.5;
     transform: translateY(100%);
-  }
-  .hover span {
+}
+
+.hover span {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,9 +143,10 @@
     font-weight: 700;
     opacity: 1;
     z-index: 2;
-    color: #3a4660;
-  }
-  .hover .social-link {
+    color: var(--triangle);
+}
+
+.hover .social-link {
     position: relative;
     display: flex;
     align-items: center;
@@ -145,37 +156,37 @@
     font-size: 24px;
     text-decoration: none;
     transition: 0.25s;
-  }
-  .hover .social-link i {
+}
+
+.hover .social-link i {
     text-shadow: 1px 1px rgba(70, 98, 127, 0.7);
     transform: scale(1);
-  }
-  .hover .social-link:hover {
-    background-color: rgba(245, 245, 245, 0.1);
-  }
-  .hover .social-link:hover i {
-    animation: bounce 0.4s linear;
-  }
+}
 
-  @keyframes bounce {
+.hover .social-link:hover {
+    background-color: rgba(245, 245, 245, 0.1);
+}
+
+.hover .social-link:hover i {
+    animation: bounce 0.4s linear;
+}
+
+@keyframes bounce {
     40% {
-      transform: scale(1.4);
+        transform: scale(1.4);
     }
     60% {
-      transform: scale(0.8);
+        transform: scale(0.8);
     }
     80% {
-      transform: scale(1.2);
+        transform: scale(1.2);
     }
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 
-
-
-
-  .overlay {
+.overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -185,12 +196,14 @@
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-  }
-  .overlay:target {
+}
+
+.overlay:target {
     visibility: visible;
     opacity: 1;
-  }
-  .popup {
+}
+
+.popup {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
@@ -199,8 +212,9 @@
     min-width: 18em;
     position: relative;
     transition: all 2s ease-in-out;
-  }
-  .popup .close {
+}
+
+.popup .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -209,9 +223,10 @@
     font-weight: bold;
     text-decoration: none;
     color: #333;
-  }
-  .popup .content {
+}
+
+.popup .content {
     max-height: 30%;
     overflow: auto;
     text-align: center;
-  }
+}

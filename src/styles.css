@@ -1,9 +1,9 @@
-body, html{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
+body, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
 @font-face {
@@ -12,14 +12,11 @@ body, html{
     font-weight: normal;
 }
 
-/* Add application styles & imports to this file! */
-.ng-sidebar {
-    background: red;
-    width: 13rem;
-}
-
-.ng-sidebar--right {
-    color: red !important;
-    background: antiquewhite;
-    width: 12rem;
+:root {
+    --primary-color: #ececec;
+    --background-color: #ececec;
+    --text-color: #2d2d2d;
+    --triangle: #1d1145;
+    --lila: #ed8a63;
+    --list-color: #e9e9e9;
 }
